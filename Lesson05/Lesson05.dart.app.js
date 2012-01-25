@@ -1145,12 +1145,12 @@ Matrix4.perspective = function(fovyDegrees, aspectRatio, zNear, zFar) {
 }
 Matrix4.prototype.toString$0 = Matrix4.prototype.toString;
 // ********** Code for top level **************
-//  ********** Library Lession05 **************
-// ********** Code for Lession05 **************
-function Lession05() {
+//  ********** Library Lesson05 **************
+// ********** Code for Lesson05 **************
+function Lesson05() {
 
 }
-Lession05.prototype.run = function() {
+Lesson05.prototype.run = function() {
   new example().Init();
 }
 // ********** Code for example **************
@@ -1286,7 +1286,7 @@ example.prototype.Init = function() {
 }
 // ********** Code for top level **************
 function main() {
-  new Lession05().run();
+  new Lesson05().run();
 }
 // 24 dynamic types.
 // 25 types

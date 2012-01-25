@@ -2,9 +2,9 @@
 #import('matrix_client.dart');
 #source('example.dart');
 
-class Lession05 {
+class Lesson05 {
 
-  Lession05() {
+  Lesson05() {
   }
 
   void run() {
@@ -21,5 +21,5 @@ class Lession05 {
 }
 
 void main() {
-  new Lession05().run();
+  new Lesson05().run();
 }
