@@ -1,3 +1,4 @@
+// Lesson05
 class example {
 
   HTMLCanvasElement canvas;
