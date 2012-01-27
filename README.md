@@ -2,7 +2,7 @@
 Lesson05
 --------
 
-Lesson06
+[Lesson06](http://nehe.gamedev.net/tutorial/texture_mapping/12038/)
 --------
 Keys for adjust the cube speed: 
 
