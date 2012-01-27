@@ -1,5 +1,5 @@
 
-Lesson05
+[Lesson05](http://nehe.gamedev.net/tutorial/3d_shapes/10035/)
 --------
 
 [Lesson06](http://nehe.gamedev.net/tutorial/texture_mapping/12038/)
