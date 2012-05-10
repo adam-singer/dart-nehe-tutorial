@@ -74,7 +74,7 @@ class example {
     gl.compileShader(vertexShader);
     
     // Create shader program, link and use
-    WebGLProgram shaderProgram = gl.createProgram();
+    shaderProgram = gl.createProgram();
     gl.attachShader(shaderProgram, vertexShader);
     gl.attachShader(shaderProgram, fragmentShader);
     gl.linkProgram(shaderProgram);
@@ -229,7 +229,7 @@ class example {
   }
   
   _tick(int t) {
-    window.webkitRequestAnimationFrame(_tick, canvas);
+    window.webkitRequestAnimationFrame(_tick);
    
     _drawScene();
     _animate();
@@ -265,7 +265,7 @@ class example {
     mvMatrix = Matrix4.translation(new Vector3(-1.5, 0.0, -8.0));
     _mvPushMatrix();
     
-    mvMatrix = mvMatrix*Matrix4.rotation(_degToRad(rPyramid), new Vector3(0, 1, 0));
+    mvMatrix = mvMatrix*Matrix4.rotation(_degToRad(rPyramid), new Vector3(0.0, 1.0, 0.0));
     
     gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, pyramidVertexPositionBuffer);
     gl.vertexAttribPointer(vertexPositionAttribute, pyramidVertexPositionBufferitemSize, WebGLRenderingContext.FLOAT, false, 0, 0);
@@ -281,7 +281,7 @@ class example {
     mvMatrix = mvMatrix * Matrix4.translation(new Vector3(3.0, 0.0, 0.0));
     
     _mvPushMatrix();
-    mvMatrix = mvMatrix * Matrix4.rotation(_degToRad(rCube), new Vector3(1, 1, 1));
+    mvMatrix = mvMatrix * Matrix4.rotation(_degToRad(rCube), new Vector3(1.0, 1.0, 1.0));
     
     gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, cubeVertexPositionBuffer);
     gl.vertexAttribPointer(vertexPositionAttribute, cubeVertexPositionBufferitemSize, WebGLRenderingContext.FLOAT, false, 0, 0);

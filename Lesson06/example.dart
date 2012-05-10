@@ -112,7 +112,7 @@ class example {
   
   _createBuffers() {
     cubeVertexPositionBuffer = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
+    gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, cubeVertexPositionBuffer);
     var vertices = [
         // Front face
         -1.0, -1.0,  1.0,
@@ -150,14 +150,14 @@ class example {
         -1.0,  1.0,  1.0,
         -1.0,  1.0, -1.0,
     ];
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array.fromList(vertices), gl.STATIC_DRAW);
+    gl.bufferData(WebGLRenderingContext.ARRAY_BUFFER, new Float32Array.fromList(vertices), WebGLRenderingContext.STATIC_DRAW);
     cubeVertexPositionBufferitemSize = 3;
     cubeVertexPositionBuffernumItems = 24;
 
 
     
     cubeVertexTextureCoordBuffer = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexTextureCoordBuffer);
+    gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, cubeVertexTextureCoordBuffer);
     var textureCoords = [
         // Front face
         0.0, 0.0,
@@ -195,12 +195,12 @@ class example {
         1.0, 1.0,
         0.0, 1.0,
     ];
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array.fromList(textureCoords), gl.STATIC_DRAW);
+    gl.bufferData(WebGLRenderingContext.ARRAY_BUFFER, new Float32Array.fromList(textureCoords), WebGLRenderingContext.STATIC_DRAW);
     cubeVertexTextureCoordBufferitemSize = 2;
     cubeVertexTextureCoordBuffernumItems = 24;
 
     cubeVertexIndexBuffer = gl.createBuffer();
-    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
+    gl.bindBuffer(WebGLRenderingContext.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
     var cubeVertexIndices = [
         0, 1, 2,      0, 2, 3,    // Front face
         4, 5, 6,      4, 6, 7,    // Back face
@@ -209,31 +209,31 @@ class example {
         16, 17, 18,   16, 18, 19, // Right face
         20, 21, 22,   20, 22, 23  // Left face
     ];
-    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array.fromList(cubeVertexIndices), gl.STATIC_DRAW);
+    gl.bufferData(WebGLRenderingContext.ELEMENT_ARRAY_BUFFER, new Uint16Array.fromList(cubeVertexIndices), WebGLRenderingContext.STATIC_DRAW);
     cubeVertexIndexBufferitemSize = 1;
     cubeVertexIndexBuffernumItems = 36;
 }
   
   _handleLoadedTexture(textures) {
-    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1);
+    gl.pixelStorei(WebGLRenderingContext.UNPACK_FLIP_Y_WEBGL, 1);
 
-    gl.bindTexture(gl.TEXTURE_2D, textures[0]);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, crateImage);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, textures[0]);
+    gl.texImage2D(WebGLRenderingContext.TEXTURE_2D, 0, WebGLRenderingContext.RGBA, WebGLRenderingContext.RGBA, WebGLRenderingContext.UNSIGNED_BYTE, crateImage);
+    gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MAG_FILTER, WebGLRenderingContext.NEAREST);
+    gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MIN_FILTER, WebGLRenderingContext.NEAREST);
 
-    gl.bindTexture(gl.TEXTURE_2D, textures[1]);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, crateImage);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, textures[1]);
+    gl.texImage2D(WebGLRenderingContext.TEXTURE_2D, 0, WebGLRenderingContext.RGBA, WebGLRenderingContext.RGBA, WebGLRenderingContext.UNSIGNED_BYTE, crateImage);
+    gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MAG_FILTER, WebGLRenderingContext.LINEAR);
+    gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MIN_FILTER, WebGLRenderingContext.LINEAR);
 
-    gl.bindTexture(gl.TEXTURE_2D, textures[2]);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, crateImage);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
-    gl.generateMipmap(gl.TEXTURE_2D);
+    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, textures[2]);
+    gl.texImage2D(WebGLRenderingContext.TEXTURE_2D, 0, WebGLRenderingContext.RGBA, WebGLRenderingContext.RGBA, WebGLRenderingContext.UNSIGNED_BYTE, crateImage);
+    gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MAG_FILTER, WebGLRenderingContext.LINEAR);
+    gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MIN_FILTER, WebGLRenderingContext.LINEAR_MIPMAP_NEAREST);
+    gl.generateMipmap(WebGLRenderingContext.TEXTURE_2D);
 
-    gl.bindTexture(gl.TEXTURE_2D, null);
+    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, null);
 }
   
   _setMatrixUniforms() {
@@ -277,23 +277,23 @@ class example {
     
     mvMatrix = Matrix4.translation(new Vector3(0.0, 0.0, z));
     
-    mvMatrix = mvMatrix*Matrix4.rotation(_degToRad(xRot), new Vector3(1, 0, 0));
-    mvMatrix = mvMatrix*Matrix4.rotation(_degToRad(yRot), new Vector3(0, 1, 0));
+    mvMatrix = mvMatrix*Matrix4.rotation(_degToRad(xRot), new Vector3(1.0, 0.0, 0.0));
+    mvMatrix = mvMatrix*Matrix4.rotation(_degToRad(yRot), new Vector3(0.0, 1.0, 0.0));
     
-    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexPositionBuffer);
-    gl.vertexAttribPointer(vertexPositionAttribute, cubeVertexPositionBufferitemSize, gl.FLOAT, false, 0, 0);
+    gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, cubeVertexPositionBuffer);
+    gl.vertexAttribPointer(vertexPositionAttribute, cubeVertexPositionBufferitemSize, WebGLRenderingContext.FLOAT, false, 0, 0);
 
-    gl.bindBuffer(gl.ARRAY_BUFFER, cubeVertexTextureCoordBuffer);
-    gl.vertexAttribPointer(textureCoordAttribute, cubeVertexTextureCoordBufferitemSize, gl.FLOAT, false, 0, 0);
+    gl.bindBuffer(WebGLRenderingContext.ARRAY_BUFFER, cubeVertexTextureCoordBuffer);
+    gl.vertexAttribPointer(textureCoordAttribute, cubeVertexTextureCoordBufferitemSize, WebGLRenderingContext.FLOAT, false, 0, 0);
 
 
-    gl.activeTexture(gl.TEXTURE0);
-    gl.bindTexture(gl.TEXTURE_2D, crateTextures[filter]);
+    gl.activeTexture(WebGLRenderingContext.TEXTURE0);
+    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, crateTextures[filter]);
     gl.uniform1i(samplerUniform, 0);
 
-    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
+    gl.bindBuffer(WebGLRenderingContext.ELEMENT_ARRAY_BUFFER, cubeVertexIndexBuffer);
     _setMatrixUniforms();
-    gl.drawElements(gl.TRIANGLES, cubeVertexIndexBuffernumItems, gl.UNSIGNED_SHORT, 0);
+    gl.drawElements(WebGLRenderingContext.TRIANGLES, cubeVertexIndexBuffernumItems, WebGLRenderingContext.UNSIGNED_SHORT, 0);
   }
   
   
@@ -311,7 +311,7 @@ class example {
   
   
   _tick(int t) {
-    window.webkitRequestAnimationFrame(_tick, canvas);
+    window.webkitRequestAnimationFrame(_tick);
    
     _drawScene();
     _animate();

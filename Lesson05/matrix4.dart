@@ -315,7 +315,7 @@ class Matrix4 {
     m.m11 = zNear / yTop;
     m.m22 = -(zFar + zNear) / zDepth;
     m.m23 = -(2 * zNear * zFar) / zDepth;
-    m.m32 = -1;
+    m.m32 = -1.0;
     return m;
   }
 
