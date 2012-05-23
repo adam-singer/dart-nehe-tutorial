@@ -1,7 +1,7 @@
 // Lesson06
 class example {
 
-  HTMLCanvasElement canvas;
+  CanvasElement canvas;
   WebGLRenderingContext gl;
   String fragmentShaderSource;
   String vertexShaderSource;
@@ -49,7 +49,7 @@ class example {
   int cubeVertexTextureCoordBuffernumItems;
   
   List<WebGLTexture> crateTextures;
-  HTMLImageElement crateImage;
+  ImageElement crateImage;
   _createShaders() {
   
     fragmentShaderSource = """
@@ -233,7 +233,7 @@ class example {
     gl.texParameteri(WebGLRenderingContext.TEXTURE_2D, WebGLRenderingContext.TEXTURE_MIN_FILTER, WebGLRenderingContext.LINEAR_MIPMAP_NEAREST);
     gl.generateMipmap(WebGLRenderingContext.TEXTURE_2D);
 
-    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, null);
+    gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, textures[0]);
 }
   
   _setMatrixUniforms() {
@@ -248,7 +248,7 @@ class example {
   _createTextures() {
     //Element crateImage; // = new HTMLImageElement();
     crateTextures=[];
-    crateImage = document.getElementById('crate');
+    crateImage = document.query('#crate');
     for (var i=0; i < 3; i++) {
       WebGLTexture texture = gl.createTexture();
       //texture.image = crateImage;
@@ -324,7 +324,7 @@ class example {
   
   Init() {
     mvMatrixStack = [];
-    canvas = document.getElementById("canvas");
+    canvas = document.query("#canvas");
     gl = canvas.getContext("experimental-webgl");
     
     gl.viewport(0, 0, canvas.width, canvas.height);
@@ -336,8 +336,8 @@ class example {
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.enable(WebGLRenderingContext.DEPTH_TEST);
     
-    document.addEventListener("keydown", _doKeyDown, true);
-    
+    //document.addEventListener("keydown", _doKeyDown, true);
+    document.on.keyDown.add(_doKeyDown);
     _tick(0);
     
   }

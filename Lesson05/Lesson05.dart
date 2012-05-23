@@ -1,4 +1,4 @@
-#import('dart:dom');
+#import('dart:html');
 #import('matrix_client.dart');
 #source('example.dart');
 
@@ -15,8 +15,8 @@ class Lesson05 {
   void write(String message) {
     // the HTML library defines a global "document" variable
     //document.query('#status').innerHTML = message;
-    HTMLLabelElement  l = document.getElementById('status'); //  = message;
-    l.innerText = message;
+    //HTMLLabelElement  l = document.getElementById('status'); //  = message;
+    //l.innerText = message;
   }
 }
 

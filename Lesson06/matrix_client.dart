@@ -7,5 +7,5 @@
  * (This imports dart:dom because the Matrix4 class uses Float32Array.
  */
 #library("matrix");
-#import("dart:dom");
+#import("dart:html");
 #source("matrix4.dart");

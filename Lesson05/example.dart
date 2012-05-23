@@ -1,7 +1,7 @@
 // Lesson05
 class example {
 
-  HTMLCanvasElement canvas;
+  CanvasElement canvas;
   WebGLRenderingContext gl;
   String fragmentShaderSource;
   String vertexShaderSource;
@@ -305,7 +305,7 @@ class example {
   
   Init() {
     mvMatrixStack = [];
-    canvas = document.getElementById("canvas");
+    canvas = document.query("#canvas");
     gl = canvas.getContext("experimental-webgl");
     
     gl.viewport(0, 0, canvas.width, canvas.height);
