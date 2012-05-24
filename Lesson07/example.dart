@@ -314,7 +314,8 @@ class example {
     gl.bindTexture(WebGLRenderingContext.TEXTURE_2D, crateTexture);
     gl.uniform1i(samplerUniform, 0);
     var lighting = document.query("#lighting").checked;
-    gl.uniform1i(useLightingUniform, lighting);
+    int li = (lighting ? 1:0);
+    gl.uniform1i(useLightingUniform, li);
     if (lighting) {
         gl.uniform3f(
             ambientColorUniform,
@@ -328,6 +329,7 @@ class example {
             Math.parseDouble(document.query("#lightDirectionY").value),
             Math.parseDouble(document.query("#lightDirectionZ").value)
         );
+        // FIXME: use the other matrix lib
 //        var adjustedLD = vec3.create();
 //        vec3.normalize(lightingDirection, adjustedLD);
 //        vec3.scale(adjustedLD, -1);
@@ -355,27 +357,27 @@ class example {
   }
   
   _handleKeys() {
-    if (currentlyPressedKeys[33]) {
+    if (currentlyPressedKeys.containsKey(33)) {
       // Page Up
       z -= 0.05;
     }
-    if (currentlyPressedKeys[34]) {
+    if (currentlyPressedKeys.containsKey(34)) {
         // Page Down
         z += 0.05;
     }
-    if (currentlyPressedKeys[37]) {
+    if (currentlyPressedKeys.containsKey(37)) {
         // Left cursor key
         ySpeed -= 1;
     }
-    if (currentlyPressedKeys[39]) {
+    if (currentlyPressedKeys.containsKey(39)) {
         // Right cursor key
         ySpeed += 1;
     }
-    if (currentlyPressedKeys[38]) {
+    if (currentlyPressedKeys.containsKey(38)) {
         // Up cursor key
         xSpeed -= 1;
     }
-    if (currentlyPressedKeys[40]) {
+    if (currentlyPressedKeys.containsKey(40)) {
         // Down cursor key
         xSpeed += 1;
     }
@@ -399,6 +401,7 @@ class example {
     }
     
     gl.viewport(0, 0, canvas.width, canvas.height);
+    mvMatrixStack = new List();
     
     _initShaders();
     _initBuffers();
