@@ -1,0 +1,806 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Library html / Interface MediaController</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="html" data-type="MediaController">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../html.html">html</a> &rsaquo; <a href="../html/MediaController.html">MediaController</a></div>
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_coreimpl.html">dart:coreimpl</a></h2><h2><div class="icon-library"></div><a href="../gl-matrix.html">gl-matrix</a></h2><h2><div class="icon-library"></div><a href="../html.html">html</a></h2><ul class="icon">
+<li><a href="../html/AbstractWorker.html"><div class="icon-interface"></div>AbstractWorker</a></li>
+<li><a href="../html/AbstractWorkerEvents.html"><div class="icon-interface"></div>AbstractWorkerEvents</a></li>
+<li><a href="../html/AnchorElement.html"><div class="icon-interface"></div>AnchorElement</a></li>
+<li><a href="../html/Animation.html"><div class="icon-interface"></div>Animation</a></li>
+<li><a href="../html/AnimationEvent.html"><div class="icon-interface"></div>AnimationEvent</a></li>
+<li><a href="../html/AnimationList.html"><div class="icon-interface"></div>AnimationList</a></li>
+<li><a href="../html/AppletElement.html"><div class="icon-interface"></div>AppletElement</a></li>
+<li><a href="../html/AreaElement.html"><div class="icon-interface"></div>AreaElement</a></li>
+<li><a href="../html/ArrayBuffer.html"><div class="icon-interface"></div>ArrayBuffer</a></li>
+<li><a href="../html/ArrayBufferView.html"><div class="icon-interface"></div>ArrayBufferView</a></li>
+<li><a href="../html/Attr.html"><div class="icon-interface"></div>Attr</a></li>
+<li><a href="../html/AttributeMap.html"><div class="icon-interface"></div>AttributeMap</a></li>
+<li><a href="../html/AudioBuffer.html"><div class="icon-interface"></div>AudioBuffer</a></li>
+<li><a href="../html/AudioBufferCallback.html"><div class="icon-interface"></div>AudioBufferCallback</a></li>
+<li><a href="../html/AudioBufferSourceNode.html"><div class="icon-interface"></div>AudioBufferSourceNode</a></li>
+<li><a href="../html/AudioChannelMerger.html"><div class="icon-interface"></div>AudioChannelMerger</a></li>
+<li><a href="../html/AudioChannelSplitter.html"><div class="icon-interface"></div>AudioChannelSplitter</a></li>
+<li><a href="../html/AudioContext.html"><div class="icon-interface"></div>AudioContext</a></li>
+<li><a href="../html/AudioDestinationNode.html"><div class="icon-interface"></div>AudioDestinationNode</a></li>
+<li><a href="../html/AudioElement.html"><div class="icon-interface"></div>AudioElement</a></li>
+<li><a href="../html/AudioGain.html"><div class="icon-interface"></div>AudioGain</a></li>
+<li><a href="../html/AudioGainNode.html"><div class="icon-interface"></div>AudioGainNode</a></li>
+<li><a href="../html/AudioListener.html"><div class="icon-interface"></div>AudioListener</a></li>
+<li><a href="../html/AudioNode.html"><div class="icon-interface"></div>AudioNode</a></li>
+<li><a href="../html/AudioPannerNode.html"><div class="icon-interface"></div>AudioPannerNode</a></li>
+<li><a href="../html/AudioParam.html"><div class="icon-interface"></div>AudioParam</a></li>
+<li><a href="../html/AudioProcessingEvent.html"><div class="icon-interface"></div>AudioProcessingEvent</a></li>
+<li><a href="../html/AudioSourceNode.html"><div class="icon-interface"></div>AudioSourceNode</a></li>
+<li><a href="../html/BarInfo.html"><div class="icon-interface"></div>BarInfo</a></li>
+<li><a href="../html/BaseElement.html"><div class="icon-interface"></div>BaseElement</a></li>
+<li><a href="../html/BaseFontElement.html"><div class="icon-interface"></div>BaseFontElement</a></li>
+<li><a href="../html/BeforeLoadEvent.html"><div class="icon-interface"></div>BeforeLoadEvent</a></li>
+<li><a href="../html/BiquadFilterNode.html"><div class="icon-interface"></div>BiquadFilterNode</a></li>
+<li><a href="../html/Blob.html"><div class="icon-interface"></div>Blob</a></li>
+<li><a href="../html/BlobBuilder.html"><div class="icon-interface"></div>BlobBuilder</a></li>
+<li><a href="../html/BodyElement.html"><div class="icon-interface"></div>BodyElement</a></li>
+<li><a href="../html/BodyElementEvents.html"><div class="icon-interface"></div>BodyElementEvents</a></li>
+<li><a href="../html/BRElement.html"><div class="icon-interface"></div>BRElement</a></li>
+<li><a href="../html/ButtonElement.html"><div class="icon-interface"></div>ButtonElement</a></li>
+<li><a href="../html/CanvasElement.html"><div class="icon-interface"></div>CanvasElement</a></li>
+<li><a href="../html/CanvasGradient.html"><div class="icon-interface"></div>CanvasGradient</a></li>
+<li><a href="../html/CanvasPattern.html"><div class="icon-interface"></div>CanvasPattern</a></li>
+<li><a href="../html/CanvasPixelArray.html"><div class="icon-interface"></div>CanvasPixelArray</a></li>
+<li><a href="../html/CanvasRenderingContext.html"><div class="icon-interface"></div>CanvasRenderingContext</a></li>
+<li><a href="../html/CanvasRenderingContext2D.html"><div class="icon-interface"></div>CanvasRenderingContext2D</a></li>
+<li><a href="../html/CDATASection.html"><div class="icon-interface"></div>CDATASection</a></li>
+<li><a href="../html/CharacterData.html"><div class="icon-interface"></div>CharacterData</a></li>
+<li><a href="../html/ClientRect.html"><div class="icon-interface"></div>ClientRect</a></li>
+<li><a href="../html/ClientRectList.html"><div class="icon-interface"></div>ClientRectList</a></li>
+<li><a href="../html/Clipboard.html"><div class="icon-interface"></div>Clipboard</a></li>
+<li><a href="../html/CloseEvent.html"><div class="icon-interface"></div>CloseEvent</a></li>
+<li><a href="../html/Comment.html"><div class="icon-interface"></div>Comment</a></li>
+<li><a href="../html/CompositionEvent.html"><div class="icon-interface"></div>CompositionEvent</a></li>
+<li><a href="../html/ComputeValue.html"><div class="icon-interface"></div>ComputeValue</a></li>
+<li><a href="../html/Console.html"><div class="icon-interface"></div>Console</a></li>
+<li><a href="../html/ContentElement.html"><div class="icon-interface"></div>ContentElement</a></li>
+<li><a href="../html/ConvolverNode.html"><div class="icon-interface"></div>ConvolverNode</a></li>
+<li><a href="../html/Coordinates.html"><div class="icon-interface"></div>Coordinates</a></li>
+<li><a href="../html/Counter.html"><div class="icon-interface"></div>Counter</a></li>
+<li><a href="../html/Crypto.html"><div class="icon-interface"></div>Crypto</a></li>
+<li><a href="../html/CSSCharsetRule.html"><div class="icon-interface"></div>CSSCharsetRule</a></li>
+<li><a href="../html/CSSFontFaceRule.html"><div class="icon-interface"></div>CSSFontFaceRule</a></li>
+<li><a href="../html/CSSImportRule.html"><div class="icon-interface"></div>CSSImportRule</a></li>
+<li><a href="../html/CSSKeyframeRule.html"><div class="icon-interface"></div>CSSKeyframeRule</a></li>
+<li><a href="../html/CSSKeyframesRule.html"><div class="icon-interface"></div>CSSKeyframesRule</a></li>
+<li><a href="../html/CSSMatrix.html"><div class="icon-interface"></div>CSSMatrix</a></li>
+<li><a href="../html/CSSMediaRule.html"><div class="icon-interface"></div>CSSMediaRule</a></li>
+<li><a href="../html/CSSPageRule.html"><div class="icon-interface"></div>CSSPageRule</a></li>
+<li><a href="../html/CSSPrimitiveValue.html"><div class="icon-interface"></div>CSSPrimitiveValue</a></li>
+<li><a href="../html/CSSRule.html"><div class="icon-interface"></div>CSSRule</a></li>
+<li><a href="../html/CSSRuleList.html"><div class="icon-interface"></div>CSSRuleList</a></li>
+<li><a href="../html/CSSStyleDeclaration.html"><div class="icon-interface"></div>CSSStyleDeclaration</a></li>
+<li><a href="../html/CSSStyleRule.html"><div class="icon-interface"></div>CSSStyleRule</a></li>
+<li><a href="../html/CSSStyleSheet.html"><div class="icon-interface"></div>CSSStyleSheet</a></li>
+<li><a href="../html/CSSTransformValue.html"><div class="icon-interface"></div>CSSTransformValue</a></li>
+<li><a href="../html/CSSUnknownRule.html"><div class="icon-interface"></div>CSSUnknownRule</a></li>
+<li><a href="../html/CSSValue.html"><div class="icon-interface"></div>CSSValue</a></li>
+<li><a href="../html/CSSValueList.html"><div class="icon-interface"></div>CSSValueList</a></li>
+<li><a href="../html/CustomEvent.html"><div class="icon-interface"></div>CustomEvent</a></li>
+<li><a href="../html/Database.html"><div class="icon-interface"></div>Database</a></li>
+<li><a href="../html/DatabaseCallback.html"><div class="icon-interface"></div>DatabaseCallback</a></li>
+<li><a href="../html/DatabaseSync.html"><div class="icon-interface"></div>DatabaseSync</a></li>
+<li><a href="../html/DataTransferItem.html"><div class="icon-interface"></div>DataTransferItem</a></li>
+<li><a href="../html/DataTransferItemList.html"><div class="icon-interface"></div>DataTransferItemList</a></li>
+<li><a href="../html/DataView.html"><div class="icon-interface"></div>DataView</a></li>
+<li><a href="../html/DedicatedWorkerContext.html"><div class="icon-interface"></div>DedicatedWorkerContext</a></li>
+<li><a href="../html/DelayNode.html"><div class="icon-interface"></div>DelayNode</a></li>
+<li><a href="../html/DeprecatedPeerConnection.html"><div class="icon-interface"></div>DeprecatedPeerConnection</a></li>
+<li><a href="../html/DetailsElement.html"><div class="icon-interface"></div>DetailsElement</a></li>
+<li><a href="../html/DeviceMotionEvent.html"><div class="icon-interface"></div>DeviceMotionEvent</a></li>
+<li><a href="../html/DeviceOrientationEvent.html"><div class="icon-interface"></div>DeviceOrientationEvent</a></li>
+<li><a href="../html/DirectoryElement.html"><div class="icon-interface"></div>DirectoryElement</a></li>
+<li><a href="../html/DirectoryEntry.html"><div class="icon-interface"></div>DirectoryEntry</a></li>
+<li><a href="../html/DirectoryEntrySync.html"><div class="icon-interface"></div>DirectoryEntrySync</a></li>
+<li><a href="../html/DirectoryReader.html"><div class="icon-interface"></div>DirectoryReader</a></li>
+<li><a href="../html/DirectoryReaderSync.html"><div class="icon-interface"></div>DirectoryReaderSync</a></li>
+<li><a href="../html/DivElement.html"><div class="icon-interface"></div>DivElement</a></li>
+<li><a href="../html/DListElement.html"><div class="icon-interface"></div>DListElement</a></li>
+<li><a href="../html/Document.html"><div class="icon-interface"></div>Document</a></li>
+<li><a href="../html/DocumentEvents.html"><div class="icon-interface"></div>DocumentEvents</a></li>
+<li><a href="../html/DocumentFragment.html"><div class="icon-interface"></div>DocumentFragment</a></li>
+<li><a href="../html/DocumentType.html"><div class="icon-interface"></div>DocumentType</a></li>
+<li><a href="../html/DOMApplicationCache.html"><div class="icon-interface"></div>DOMApplicationCache</a></li>
+<li><a href="../html/DOMApplicationCacheEvents.html"><div class="icon-interface"></div>DOMApplicationCacheEvents</a></li>
+<li><a href="../html/DOMFileSystem.html"><div class="icon-interface"></div>DOMFileSystem</a></li>
+<li><a href="../html/DOMFileSystemSync.html"><div class="icon-interface"></div>DOMFileSystemSync</a></li>
+<li><a href="../html/DOMFormData.html"><div class="icon-interface"></div>DOMFormData</a></li>
+<li><a href="../html/DOMImplementation.html"><div class="icon-interface"></div>DOMImplementation</a></li>
+<li><a href="../html/DOMMimeType.html"><div class="icon-interface"></div>DOMMimeType</a></li>
+<li><a href="../html/DOMMimeTypeArray.html"><div class="icon-interface"></div>DOMMimeTypeArray</a></li>
+<li><a href="../html/DOMParser.html"><div class="icon-interface"></div>DOMParser</a></li>
+<li><a href="../html/DOMPlugin.html"><div class="icon-interface"></div>DOMPlugin</a></li>
+<li><a href="../html/DOMPluginArray.html"><div class="icon-interface"></div>DOMPluginArray</a></li>
+<li><a href="../html/DOMSelection.html"><div class="icon-interface"></div>DOMSelection</a></li>
+<li><a href="../html/DOMSettableTokenList.html"><div class="icon-interface"></div>DOMSettableTokenList</a></li>
+<li><a href="../html/DOMTokenList.html"><div class="icon-interface"></div>DOMTokenList</a></li>
+<li><a href="../html/DOMURL.html"><div class="icon-interface"></div>DOMURL</a></li>
+<li><a href="../html/DynamicsCompressorNode.html"><div class="icon-interface"></div>DynamicsCompressorNode</a></li>
+<li><a href="../html/Element.html"><div class="icon-interface"></div>Element</a></li>
+<li><a href="../html/ElementEvents.html"><div class="icon-interface"></div>ElementEvents</a></li>
+<li><a href="../html/ElementList.html"><div class="icon-interface"></div>ElementList</a></li>
+<li><a href="../html/ElementRect.html"><div class="icon-interface"></div>ElementRect</a></li>
+<li><a href="../html/ElementTimeControl.html"><div class="icon-interface"></div>ElementTimeControl</a></li>
+<li><a href="../html/ElementTraversal.html"><div class="icon-interface"></div>ElementTraversal</a></li>
+<li><a href="../html/EmbedElement.html"><div class="icon-interface"></div>EmbedElement</a></li>
+<li><a href="../html/EmptyElementRect.html"><div class="icon-class"></div>EmptyElementRect</a></li>
+<li><a href="../html/Entity.html"><div class="icon-interface"></div>Entity</a></li>
+<li><a href="../html/EntityReference.html"><div class="icon-interface"></div>EntityReference</a></li>
+<li><a href="../html/EntriesCallback.html"><div class="icon-interface"></div>EntriesCallback</a></li>
+<li><a href="../html/Entry.html"><div class="icon-interface"></div>Entry</a></li>
+<li><a href="../html/EntryArray.html"><div class="icon-interface"></div>EntryArray</a></li>
+<li><a href="../html/EntryArraySync.html"><div class="icon-interface"></div>EntryArraySync</a></li>
+<li><a href="../html/EntryCallback.html"><div class="icon-interface"></div>EntryCallback</a></li>
+<li><a href="../html/EntrySync.html"><div class="icon-interface"></div>EntrySync</a></li>
+<li><a href="../html/ErrorCallback.html"><div class="icon-interface"></div>ErrorCallback</a></li>
+<li><a href="../html/ErrorEvent.html"><div class="icon-interface"></div>ErrorEvent</a></li>
+<li><a href="../html/Event.html"><div class="icon-interface"></div>Event</a></li>
+<li><a href="../html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../html/EventListenerList.html"><div class="icon-interface"></div>EventListenerList</a></li>
+<li><a href="../html/Events.html"><div class="icon-interface"></div>Events</a></li>
+<li><a href="../html/EventSource.html"><div class="icon-interface"></div>EventSource</a></li>
+<li><a href="../html/EventSourceEvents.html"><div class="icon-interface"></div>EventSourceEvents</a></li>
+<li><a href="../html/EventTarget.html"><div class="icon-interface"></div>EventTarget</a></li>
+<li><a href="../html/EXTTextureFilterAnisotropic.html"><div class="icon-interface"></div>EXTTextureFilterAnisotropic</a></li>
+<li><a href="../html/FieldSetElement.html"><div class="icon-interface"></div>FieldSetElement</a></li>
+<li><a href="../html/File.html"><div class="icon-interface"></div>File</a></li>
+<li><a href="../html/FileCallback.html"><div class="icon-interface"></div>FileCallback</a></li>
+<li><a href="../html/FileEntry.html"><div class="icon-interface"></div>FileEntry</a></li>
+<li><a href="../html/FileEntrySync.html"><div class="icon-interface"></div>FileEntrySync</a></li>
+<li><a href="../html/FileError.html"><div class="icon-interface"></div>FileError</a></li>
+<li><a href="../html/FileList.html"><div class="icon-interface"></div>FileList</a></li>
+<li><a href="../html/FileReader.html"><div class="icon-interface"></div>FileReader</a></li>
+<li><a href="../html/FileReaderSync.html"><div class="icon-interface"></div>FileReaderSync</a></li>
+<li><a href="../html/FileSystemCallback.html"><div class="icon-interface"></div>FileSystemCallback</a></li>
+<li><a href="../html/FileWriter.html"><div class="icon-interface"></div>FileWriter</a></li>
+<li><a href="../html/FileWriterCallback.html"><div class="icon-interface"></div>FileWriterCallback</a></li>
+<li><a href="../html/FileWriterSync.html"><div class="icon-interface"></div>FileWriterSync</a></li>
+<li><a href="../html/FilteredElementList.html"><div class="icon-class"></div>FilteredElementList</a></li>
+<li><a href="../html/Float32Array.html"><div class="icon-interface"></div>Float32Array</a></li>
+<li><a href="../html/Float64Array.html"><div class="icon-interface"></div>Float64Array</a></li>
+<li><a href="../html/FontElement.html"><div class="icon-interface"></div>FontElement</a></li>
+<li><a href="../html/FormElement.html"><div class="icon-interface"></div>FormElement</a></li>
+<li><a href="../html/FrameElement.html"><div class="icon-interface"></div>FrameElement</a></li>
+<li><a href="../html/FrameSetElement.html"><div class="icon-interface"></div>FrameSetElement</a></li>
+<li><a href="../html/FrameSetElementEvents.html"><div class="icon-interface"></div>FrameSetElementEvents</a></li>
+<li><a href="../html/Geolocation.html"><div class="icon-interface"></div>Geolocation</a></li>
+<li><a href="../html/Geoposition.html"><div class="icon-interface"></div>Geoposition</a></li>
+<li><a href="../html/HashChangeEvent.html"><div class="icon-interface"></div>HashChangeEvent</a></li>
+<li><a href="../html/HeadElement.html"><div class="icon-interface"></div>HeadElement</a></li>
+<li><a href="../html/HeadingElement.html"><div class="icon-interface"></div>HeadingElement</a></li>
+<li><a href="../html/HighPass2FilterNode.html"><div class="icon-interface"></div>HighPass2FilterNode</a></li>
+<li><a href="../html/History.html"><div class="icon-interface"></div>History</a></li>
+<li><a href="../html/HRElement.html"><div class="icon-interface"></div>HRElement</a></li>
+<li><a href="../html/HTMLAllCollection.html"><div class="icon-interface"></div>HTMLAllCollection</a></li>
+<li><a href="../html/HTMLCollection.html"><div class="icon-interface"></div>HTMLCollection</a></li>
+<li><a href="../html/HtmlElement.html"><div class="icon-interface"></div>HtmlElement</a></li>
+<li><a href="../html/HTMLOptionsCollection.html"><div class="icon-interface"></div>HTMLOptionsCollection</a></li>
+<li><a href="../html/IceCallback.html"><div class="icon-interface"></div>IceCallback</a></li>
+<li><a href="../html/IceCandidate.html"><div class="icon-interface"></div>IceCandidate</a></li>
+<li><a href="../html/IDBAny.html"><div class="icon-interface"></div>IDBAny</a></li>
+<li><a href="../html/IDBCursor.html"><div class="icon-interface"></div>IDBCursor</a></li>
+<li><a href="../html/IDBCursorWithValue.html"><div class="icon-interface"></div>IDBCursorWithValue</a></li>
+<li><a href="../html/IDBDatabase.html"><div class="icon-interface"></div>IDBDatabase</a></li>
+<li><a href="../html/IDBDatabaseError.html"><div class="icon-interface"></div>IDBDatabaseError</a></li>
+<li><a href="../html/IDBFactory.html"><div class="icon-interface"></div>IDBFactory</a></li>
+<li><a href="../html/IDBIndex.html"><div class="icon-interface"></div>IDBIndex</a></li>
+<li><a href="../html/IDBKey.html"><div class="icon-interface"></div>IDBKey</a></li>
+<li><a href="../html/IDBKeyRange.html"><div class="icon-interface"></div>IDBKeyRange</a></li>
+<li><a href="../html/IDBObjectStore.html"><div class="icon-interface"></div>IDBObjectStore</a></li>
+<li><a href="../html/IDBRequest.html"><div class="icon-interface"></div>IDBRequest</a></li>
+<li><a href="../html/IDBTransaction.html"><div class="icon-interface"></div>IDBTransaction</a></li>
+<li><a href="../html/IDBVersionChangeEvent.html"><div class="icon-interface"></div>IDBVersionChangeEvent</a></li>
+<li><a href="../html/IDBVersionChangeRequest.html"><div class="icon-interface"></div>IDBVersionChangeRequest</a></li>
+<li><a href="../html/IFrameElement.html"><div class="icon-interface"></div>IFrameElement</a></li>
+<li><a href="../html/ImageData.html"><div class="icon-interface"></div>ImageData</a></li>
+<li><a href="../html/ImageElement.html"><div class="icon-interface"></div>ImageElement</a></li>
+<li><a href="../html/InputElement.html"><div class="icon-interface"></div>InputElement</a></li>
+<li><a href="../html/InputElementEvents.html"><div class="icon-interface"></div>InputElementEvents</a></li>
+<li><a href="../html/Int16Array.html"><div class="icon-interface"></div>Int16Array</a></li>
+<li><a href="../html/Int32Array.html"><div class="icon-interface"></div>Int32Array</a></li>
+<li><a href="../html/Int8Array.html"><div class="icon-interface"></div>Int8Array</a></li>
+<li><a href="../html/JavaScriptAudioNode.html"><div class="icon-interface"></div>JavaScriptAudioNode</a></li>
+<li><a href="../html/JavaScriptCallFrame.html"><div class="icon-interface"></div>JavaScriptCallFrame</a></li>
+<li><a href="../html/KeyboardEvent.html"><div class="icon-interface"></div>KeyboardEvent</a></li>
+<li><a href="../html/KeygenElement.html"><div class="icon-interface"></div>KeygenElement</a></li>
+<li><a href="../html/KeyLocation.html"><div class="icon-interface"></div>KeyLocation</a></li>
+<li><a href="../html/KeyName.html"><div class="icon-interface"></div>KeyName</a></li>
+<li><a href="../html/LabelElement.html"><div class="icon-interface"></div>LabelElement</a></li>
+<li><a href="../html/LegendElement.html"><div class="icon-interface"></div>LegendElement</a></li>
+<li><a href="../html/LIElement.html"><div class="icon-interface"></div>LIElement</a></li>
+<li><a href="../html/LinkElement.html"><div class="icon-interface"></div>LinkElement</a></li>
+<li><a href="../html/LocalMediaStream.html"><div class="icon-interface"></div>LocalMediaStream</a></li>
+<li><a href="../html/Location.html"><div class="icon-interface"></div>Location</a></li>
+<li><a href="../html/LowPass2FilterNode.html"><div class="icon-interface"></div>LowPass2FilterNode</a></li>
+<li><a href="../html/MapElement.html"><div class="icon-interface"></div>MapElement</a></li>
+<li><a href="../html/MarqueeElement.html"><div class="icon-interface"></div>MarqueeElement</a></li>
+<li><div class="icon-interface"></div><strong>MediaController</strong></li>
+<li><a href="../html/MediaElement.html"><div class="icon-interface"></div>MediaElement</a></li>
+<li><a href="../html/MediaElementAudioSourceNode.html"><div class="icon-interface"></div>MediaElementAudioSourceNode</a></li>
+<li><a href="../html/MediaError.html"><div class="icon-interface"></div>MediaError</a></li>
+<li><a href="../html/MediaList.html"><div class="icon-interface"></div>MediaList</a></li>
+<li><a href="../html/MediaQueryList.html"><div class="icon-interface"></div>MediaQueryList</a></li>
+<li><a href="../html/MediaQueryListListener.html"><div class="icon-interface"></div>MediaQueryListListener</a></li>
+<li><a href="../html/MediaStream.html"><div class="icon-interface"></div>MediaStream</a></li>
+<li><a href="../html/MediaStreamEvent.html"><div class="icon-interface"></div>MediaStreamEvent</a></li>
+<li><a href="../html/MediaStreamList.html"><div class="icon-interface"></div>MediaStreamList</a></li>
+<li><a href="../html/MediaStreamTrack.html"><div class="icon-interface"></div>MediaStreamTrack</a></li>
+<li><a href="../html/MediaStreamTrackList.html"><div class="icon-interface"></div>MediaStreamTrackList</a></li>
+<li><a href="../html/MemoryInfo.html"><div class="icon-interface"></div>MemoryInfo</a></li>
+<li><a href="../html/MenuElement.html"><div class="icon-interface"></div>MenuElement</a></li>
+<li><a href="../html/MessageChannel.html"><div class="icon-interface"></div>MessageChannel</a></li>
+<li><a href="../html/MessageEvent.html"><div class="icon-interface"></div>MessageEvent</a></li>
+<li><a href="../html/MessagePort.html"><div class="icon-interface"></div>MessagePort</a></li>
+<li><a href="../html/MessagePortEvents.html"><div class="icon-interface"></div>MessagePortEvents</a></li>
+<li><a href="../html/Metadata.html"><div class="icon-interface"></div>Metadata</a></li>
+<li><a href="../html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../html/MetaElement.html"><div class="icon-interface"></div>MetaElement</a></li>
+<li><a href="../html/MeterElement.html"><div class="icon-interface"></div>MeterElement</a></li>
+<li><a href="../html/ModElement.html"><div class="icon-interface"></div>ModElement</a></li>
+<li><a href="../html/MouseEvent.html"><div class="icon-interface"></div>MouseEvent</a></li>
+<li><a href="../html/MutationEvent.html"><div class="icon-interface"></div>MutationEvent</a></li>
+<li><a href="../html/NamedNodeMap.html"><div class="icon-interface"></div>NamedNodeMap</a></li>
+<li><a href="../html/Navigator.html"><div class="icon-interface"></div>Navigator</a></li>
+<li><a href="../html/NavigatorUserMediaError.html"><div class="icon-interface"></div>NavigatorUserMediaError</a></li>
+<li><a href="../html/NavigatorUserMediaErrorCallback.html"><div class="icon-interface"></div>NavigatorUserMediaErrorCallback</a></li>
+<li><a href="../html/NavigatorUserMediaSuccessCallback.html"><div class="icon-interface"></div>NavigatorUserMediaSuccessCallback</a></li>
+<li><a href="../html/Node.html"><div class="icon-interface"></div>Node</a></li>
+<li><a href="../html/NodeFilter.html"><div class="icon-interface"></div>NodeFilter</a></li>
+<li><a href="../html/NodeIterator.html"><div class="icon-interface"></div>NodeIterator</a></li>
+<li><a href="../html/NodeList.html"><div class="icon-interface"></div>NodeList</a></li>
+<li><a href="../html/NodeSelector.html"><div class="icon-interface"></div>NodeSelector</a></li>
+<li><a href="../html/Notation.html"><div class="icon-interface"></div>Notation</a></li>
+<li><a href="../html/Notification.html"><div class="icon-interface"></div>Notification</a></li>
+<li><a href="../html/NotificationCenter.html"><div class="icon-interface"></div>NotificationCenter</a></li>
+<li><a href="../html/NotificationEvents.html"><div class="icon-interface"></div>NotificationEvents</a></li>
+<li><a href="../html/ObjectElement.html"><div class="icon-interface"></div>ObjectElement</a></li>
+<li><a href="../html/OESStandardDerivatives.html"><div class="icon-interface"></div>OESStandardDerivatives</a></li>
+<li><a href="../html/OESTextureFloat.html"><div class="icon-interface"></div>OESTextureFloat</a></li>
+<li><a href="../html/OESVertexArrayObject.html"><div class="icon-interface"></div>OESVertexArrayObject</a></li>
+<li><a href="../html/OfflineAudioCompletionEvent.html"><div class="icon-interface"></div>OfflineAudioCompletionEvent</a></li>
+<li><a href="../html/OListElement.html"><div class="icon-interface"></div>OListElement</a></li>
+<li><a href="../html/OptGroupElement.html"><div class="icon-interface"></div>OptGroupElement</a></li>
+<li><a href="../html/OptionElement.html"><div class="icon-interface"></div>OptionElement</a></li>
+<li><a href="../html/OutputElement.html"><div class="icon-interface"></div>OutputElement</a></li>
+<li><a href="../html/OverflowEvent.html"><div class="icon-interface"></div>OverflowEvent</a></li>
+<li><a href="../html/PageTransitionEvent.html"><div class="icon-interface"></div>PageTransitionEvent</a></li>
+<li><a href="../html/ParagraphElement.html"><div class="icon-interface"></div>ParagraphElement</a></li>
+<li><a href="../html/ParamElement.html"><div class="icon-interface"></div>ParamElement</a></li>
+<li><a href="../html/PeerConnection00.html"><div class="icon-interface"></div>PeerConnection00</a></li>
+<li><a href="../html/Performance.html"><div class="icon-interface"></div>Performance</a></li>
+<li><a href="../html/PerformanceNavigation.html"><div class="icon-interface"></div>PerformanceNavigation</a></li>
+<li><a href="../html/PerformanceTiming.html"><div class="icon-interface"></div>PerformanceTiming</a></li>
+<li><a href="../html/Point.html"><div class="icon-interface"></div>Point</a></li>
+<li><a href="../html/PopStateEvent.html"><div class="icon-interface"></div>PopStateEvent</a></li>
+<li><a href="../html/PositionCallback.html"><div class="icon-interface"></div>PositionCallback</a></li>
+<li><a href="../html/PositionError.html"><div class="icon-interface"></div>PositionError</a></li>
+<li><a href="../html/PositionErrorCallback.html"><div class="icon-interface"></div>PositionErrorCallback</a></li>
+<li><a href="../html/PreElement.html"><div class="icon-interface"></div>PreElement</a></li>
+<li><a href="../html/ProcessingInstruction.html"><div class="icon-interface"></div>ProcessingInstruction</a></li>
+<li><a href="../html/ProgressElement.html"><div class="icon-interface"></div>ProgressElement</a></li>
+<li><a href="../html/ProgressEvent.html"><div class="icon-interface"></div>ProgressEvent</a></li>
+<li><a href="../html/QuoteElement.html"><div class="icon-interface"></div>QuoteElement</a></li>
+<li><a href="../html/Range.html"><div class="icon-interface"></div>Range</a></li>
+<li><a href="../html/ReadyState.html"><div class="icon-interface"></div>ReadyState</a></li>
+<li><a href="../html/RealtimeAnalyserNode.html"><div class="icon-interface"></div>RealtimeAnalyserNode</a></li>
+<li><a href="../html/Rect.html"><div class="icon-interface"></div>Rect</a></li>
+<li><a href="../html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../html/RGBColor.html"><div class="icon-interface"></div>RGBColor</a></li>
+<li><a href="../html/Screen.html"><div class="icon-interface"></div>Screen</a></li>
+<li><a href="../html/ScriptElement.html"><div class="icon-interface"></div>ScriptElement</a></li>
+<li><a href="../html/ScriptProfile.html"><div class="icon-interface"></div>ScriptProfile</a></li>
+<li><a href="../html/ScriptProfileNode.html"><div class="icon-interface"></div>ScriptProfileNode</a></li>
+<li><a href="../html/SelectElement.html"><div class="icon-interface"></div>SelectElement</a></li>
+<li><a href="../html/SessionDescription.html"><div class="icon-interface"></div>SessionDescription</a></li>
+<li><a href="../html/ShadowElement.html"><div class="icon-interface"></div>ShadowElement</a></li>
+<li><a href="../html/ShadowRoot.html"><div class="icon-interface"></div>ShadowRoot</a></li>
+<li><a href="../html/SharedWorker.html"><div class="icon-interface"></div>SharedWorker</a></li>
+<li><a href="../html/SharedWorkerContext.html"><div class="icon-interface"></div>SharedWorkerContext</a></li>
+<li><a href="../html/SignalingCallback.html"><div class="icon-interface"></div>SignalingCallback</a></li>
+<li><a href="../html/SourceElement.html"><div class="icon-interface"></div>SourceElement</a></li>
+<li><a href="../html/SpanElement.html"><div class="icon-interface"></div>SpanElement</a></li>
+<li><a href="../html/SpeechGrammar.html"><div class="icon-interface"></div>SpeechGrammar</a></li>
+<li><a href="../html/SpeechGrammarList.html"><div class="icon-interface"></div>SpeechGrammarList</a></li>
+<li><a href="../html/SpeechInputEvent.html"><div class="icon-interface"></div>SpeechInputEvent</a></li>
+<li><a href="../html/SpeechInputResult.html"><div class="icon-interface"></div>SpeechInputResult</a></li>
+<li><a href="../html/SpeechInputResultList.html"><div class="icon-interface"></div>SpeechInputResultList</a></li>
+<li><a href="../html/SpeechRecognition.html"><div class="icon-interface"></div>SpeechRecognition</a></li>
+<li><a href="../html/SpeechRecognitionAlternative.html"><div class="icon-interface"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../html/SpeechRecognitionError.html"><div class="icon-interface"></div>SpeechRecognitionError</a></li>
+<li><a href="../html/SpeechRecognitionEvent.html"><div class="icon-interface"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../html/SpeechRecognitionResult.html"><div class="icon-interface"></div>SpeechRecognitionResult</a></li>
+<li><a href="../html/SpeechRecognitionResultList.html"><div class="icon-interface"></div>SpeechRecognitionResultList</a></li>
+<li><a href="../html/SQLError.html"><div class="icon-interface"></div>SQLError</a></li>
+<li><a href="../html/SQLResultSet.html"><div class="icon-interface"></div>SQLResultSet</a></li>
+<li><a href="../html/SQLResultSetRowList.html"><div class="icon-interface"></div>SQLResultSetRowList</a></li>
+<li><a href="../html/SQLStatementCallback.html"><div class="icon-interface"></div>SQLStatementCallback</a></li>
+<li><a href="../html/SQLStatementErrorCallback.html"><div class="icon-interface"></div>SQLStatementErrorCallback</a></li>
+<li><a href="../html/SQLTransaction.html"><div class="icon-interface"></div>SQLTransaction</a></li>
+<li><a href="../html/SQLTransactionCallback.html"><div class="icon-interface"></div>SQLTransactionCallback</a></li>
+<li><a href="../html/SQLTransactionErrorCallback.html"><div class="icon-interface"></div>SQLTransactionErrorCallback</a></li>
+<li><a href="../html/SQLTransactionSync.html"><div class="icon-interface"></div>SQLTransactionSync</a></li>
+<li><a href="../html/SQLTransactionSyncCallback.html"><div class="icon-interface"></div>SQLTransactionSyncCallback</a></li>
+<li><a href="../html/Storage.html"><div class="icon-interface"></div>Storage</a></li>
+<li><a href="../html/StorageEvent.html"><div class="icon-interface"></div>StorageEvent</a></li>
+<li><a href="../html/StorageInfo.html"><div class="icon-interface"></div>StorageInfo</a></li>
+<li><a href="../html/StorageInfoErrorCallback.html"><div class="icon-interface"></div>StorageInfoErrorCallback</a></li>
+<li><a href="../html/StorageInfoQuotaCallback.html"><div class="icon-interface"></div>StorageInfoQuotaCallback</a></li>
+<li><a href="../html/StorageInfoUsageCallback.html"><div class="icon-interface"></div>StorageInfoUsageCallback</a></li>
+<li><a href="../html/StringCallback.html"><div class="icon-interface"></div>StringCallback</a></li>
+<li><a href="../html/StyleElement.html"><div class="icon-interface"></div>StyleElement</a></li>
+<li><a href="../html/StyleMedia.html"><div class="icon-interface"></div>StyleMedia</a></li>
+<li><a href="../html/StyleSheet.html"><div class="icon-interface"></div>StyleSheet</a></li>
+<li><a href="../html/StyleSheetList.html"><div class="icon-interface"></div>StyleSheetList</a></li>
+<li><a href="../html/SVGAElement.html"><div class="icon-interface"></div>SVGAElement</a></li>
+<li><a href="../html/SVGAltGlyphDefElement.html"><div class="icon-interface"></div>SVGAltGlyphDefElement</a></li>
+<li><a href="../html/SVGAltGlyphElement.html"><div class="icon-interface"></div>SVGAltGlyphElement</a></li>
+<li><a href="../html/SVGAltGlyphItemElement.html"><div class="icon-interface"></div>SVGAltGlyphItemElement</a></li>
+<li><a href="../html/SVGAngle.html"><div class="icon-interface"></div>SVGAngle</a></li>
+<li><a href="../html/SVGAnimateColorElement.html"><div class="icon-interface"></div>SVGAnimateColorElement</a></li>
+<li><a href="../html/SVGAnimatedAngle.html"><div class="icon-interface"></div>SVGAnimatedAngle</a></li>
+<li><a href="../html/SVGAnimatedBoolean.html"><div class="icon-interface"></div>SVGAnimatedBoolean</a></li>
+<li><a href="../html/SVGAnimatedEnumeration.html"><div class="icon-interface"></div>SVGAnimatedEnumeration</a></li>
+<li><a href="../html/SVGAnimatedInteger.html"><div class="icon-interface"></div>SVGAnimatedInteger</a></li>
+<li><a href="../html/SVGAnimatedLength.html"><div class="icon-interface"></div>SVGAnimatedLength</a></li>
+<li><a href="../html/SVGAnimatedLengthList.html"><div class="icon-interface"></div>SVGAnimatedLengthList</a></li>
+<li><a href="../html/SVGAnimatedNumber.html"><div class="icon-interface"></div>SVGAnimatedNumber</a></li>
+<li><a href="../html/SVGAnimatedNumberList.html"><div class="icon-interface"></div>SVGAnimatedNumberList</a></li>
+<li><a href="../html/SVGAnimatedPreserveAspectRatio.html"><div class="icon-interface"></div>SVGAnimatedPreserveAspectRatio</a></li>
+<li><a href="../html/SVGAnimatedRect.html"><div class="icon-interface"></div>SVGAnimatedRect</a></li>
+<li><a href="../html/SVGAnimatedString.html"><div class="icon-interface"></div>SVGAnimatedString</a></li>
+<li><a href="../html/SVGAnimatedTransformList.html"><div class="icon-interface"></div>SVGAnimatedTransformList</a></li>
+<li><a href="../html/SVGAnimateElement.html"><div class="icon-interface"></div>SVGAnimateElement</a></li>
+<li><a href="../html/SVGAnimateMotionElement.html"><div class="icon-interface"></div>SVGAnimateMotionElement</a></li>
+<li><a href="../html/SVGAnimateTransformElement.html"><div class="icon-interface"></div>SVGAnimateTransformElement</a></li>
+<li><a href="../html/SVGAnimationElement.html"><div class="icon-interface"></div>SVGAnimationElement</a></li>
+<li><a href="../html/SVGCircleElement.html"><div class="icon-interface"></div>SVGCircleElement</a></li>
+<li><a href="../html/SVGClipPathElement.html"><div class="icon-interface"></div>SVGClipPathElement</a></li>
+<li><a href="../html/SVGColor.html"><div class="icon-interface"></div>SVGColor</a></li>
+<li><a href="../html/SVGComponentTransferFunctionElement.html"><div class="icon-interface"></div>SVGComponentTransferFunctionElement</a></li>
+<li><a href="../html/SVGCursorElement.html"><div class="icon-interface"></div>SVGCursorElement</a></li>
+<li><a href="../html/SVGDefsElement.html"><div class="icon-interface"></div>SVGDefsElement</a></li>
+<li><a href="../html/SVGDescElement.html"><div class="icon-interface"></div>SVGDescElement</a></li>
+<li><a href="../html/SVGDocument.html"><div class="icon-interface"></div>SVGDocument</a></li>
+<li><a href="../html/SVGElement.html"><div class="icon-interface"></div>SVGElement</a></li>
+<li><a href="../html/SVGElementInstance.html"><div class="icon-interface"></div>SVGElementInstance</a></li>
+<li><a href="../html/SVGElementInstanceEvents.html"><div class="icon-interface"></div>SVGElementInstanceEvents</a></li>
+<li><a href="../html/SVGElementInstanceList.html"><div class="icon-interface"></div>SVGElementInstanceList</a></li>
+<li><a href="../html/SVGEllipseElement.html"><div class="icon-interface"></div>SVGEllipseElement</a></li>
+<li><a href="../html/SVGExternalResourcesRequired.html"><div class="icon-interface"></div>SVGExternalResourcesRequired</a></li>
+<li><a href="../html/SVGFEBlendElement.html"><div class="icon-interface"></div>SVGFEBlendElement</a></li>
+<li><a href="../html/SVGFEColorMatrixElement.html"><div class="icon-interface"></div>SVGFEColorMatrixElement</a></li>
+<li><a href="../html/SVGFEComponentTransferElement.html"><div class="icon-interface"></div>SVGFEComponentTransferElement</a></li>
+<li><a href="../html/SVGFECompositeElement.html"><div class="icon-interface"></div>SVGFECompositeElement</a></li>
+<li><a href="../html/SVGFEConvolveMatrixElement.html"><div class="icon-interface"></div>SVGFEConvolveMatrixElement</a></li>
+<li><a href="../html/SVGFEDiffuseLightingElement.html"><div class="icon-interface"></div>SVGFEDiffuseLightingElement</a></li>
+<li><a href="../html/SVGFEDisplacementMapElement.html"><div class="icon-interface"></div>SVGFEDisplacementMapElement</a></li>
+<li><a href="../html/SVGFEDistantLightElement.html"><div class="icon-interface"></div>SVGFEDistantLightElement</a></li>
+<li><a href="../html/SVGFEDropShadowElement.html"><div class="icon-interface"></div>SVGFEDropShadowElement</a></li>
+<li><a href="../html/SVGFEFloodElement.html"><div class="icon-interface"></div>SVGFEFloodElement</a></li>
+<li><a href="../html/SVGFEFuncAElement.html"><div class="icon-interface"></div>SVGFEFuncAElement</a></li>
+<li><a href="../html/SVGFEFuncBElement.html"><div class="icon-interface"></div>SVGFEFuncBElement</a></li>
+<li><a href="../html/SVGFEFuncGElement.html"><div class="icon-interface"></div>SVGFEFuncGElement</a></li>
+<li><a href="../html/SVGFEFuncRElement.html"><div class="icon-interface"></div>SVGFEFuncRElement</a></li>
+<li><a href="../html/SVGFEGaussianBlurElement.html"><div class="icon-interface"></div>SVGFEGaussianBlurElement</a></li>
+<li><a href="../html/SVGFEImageElement.html"><div class="icon-interface"></div>SVGFEImageElement</a></li>
+<li><a href="../html/SVGFEMergeElement.html"><div class="icon-interface"></div>SVGFEMergeElement</a></li>
+<li><a href="../html/SVGFEMergeNodeElement.html"><div class="icon-interface"></div>SVGFEMergeNodeElement</a></li>
+<li><a href="../html/SVGFEMorphologyElement.html"><div class="icon-interface"></div>SVGFEMorphologyElement</a></li>
+<li><a href="../html/SVGFEOffsetElement.html"><div class="icon-interface"></div>SVGFEOffsetElement</a></li>
+<li><a href="../html/SVGFEPointLightElement.html"><div class="icon-interface"></div>SVGFEPointLightElement</a></li>
+<li><a href="../html/SVGFESpecularLightingElement.html"><div class="icon-interface"></div>SVGFESpecularLightingElement</a></li>
+<li><a href="../html/SVGFESpotLightElement.html"><div class="icon-interface"></div>SVGFESpotLightElement</a></li>
+<li><a href="../html/SVGFETileElement.html"><div class="icon-interface"></div>SVGFETileElement</a></li>
+<li><a href="../html/SVGFETurbulenceElement.html"><div class="icon-interface"></div>SVGFETurbulenceElement</a></li>
+<li><a href="../html/SVGFilterElement.html"><div class="icon-interface"></div>SVGFilterElement</a></li>
+<li><a href="../html/SVGFilterPrimitiveStandardAttributes.html"><div class="icon-interface"></div>SVGFilterPrimitiveStandardAttributes</a></li>
+<li><a href="../html/SVGFitToViewBox.html"><div class="icon-interface"></div>SVGFitToViewBox</a></li>
+<li><a href="../html/SVGFontElement.html"><div class="icon-interface"></div>SVGFontElement</a></li>
+<li><a href="../html/SVGFontFaceElement.html"><div class="icon-interface"></div>SVGFontFaceElement</a></li>
+<li><a href="../html/SVGFontFaceFormatElement.html"><div class="icon-interface"></div>SVGFontFaceFormatElement</a></li>
+<li><a href="../html/SVGFontFaceNameElement.html"><div class="icon-interface"></div>SVGFontFaceNameElement</a></li>
+<li><a href="../html/SVGFontFaceSrcElement.html"><div class="icon-interface"></div>SVGFontFaceSrcElement</a></li>
+<li><a href="../html/SVGFontFaceUriElement.html"><div class="icon-interface"></div>SVGFontFaceUriElement</a></li>
+<li><a href="../html/SVGForeignObjectElement.html"><div class="icon-interface"></div>SVGForeignObjectElement</a></li>
+<li><a href="../html/SVGGElement.html"><div class="icon-interface"></div>SVGGElement</a></li>
+<li><a href="../html/SVGGlyphElement.html"><div class="icon-interface"></div>SVGGlyphElement</a></li>
+<li><a href="../html/SVGGlyphRefElement.html"><div class="icon-interface"></div>SVGGlyphRefElement</a></li>
+<li><a href="../html/SVGGradientElement.html"><div class="icon-interface"></div>SVGGradientElement</a></li>
+<li><a href="../html/SVGHKernElement.html"><div class="icon-interface"></div>SVGHKernElement</a></li>
+<li><a href="../html/SVGImageElement.html"><div class="icon-interface"></div>SVGImageElement</a></li>
+<li><a href="../html/SVGLangSpace.html"><div class="icon-interface"></div>SVGLangSpace</a></li>
+<li><a href="../html/SVGLength.html"><div class="icon-interface"></div>SVGLength</a></li>
+<li><a href="../html/SVGLengthList.html"><div class="icon-interface"></div>SVGLengthList</a></li>
+<li><a href="../html/SVGLinearGradientElement.html"><div class="icon-interface"></div>SVGLinearGradientElement</a></li>
+<li><a href="../html/SVGLineElement.html"><div class="icon-interface"></div>SVGLineElement</a></li>
+<li><a href="../html/SVGLocatable.html"><div class="icon-interface"></div>SVGLocatable</a></li>
+<li><a href="../html/SVGMarkerElement.html"><div class="icon-interface"></div>SVGMarkerElement</a></li>
+<li><a href="../html/SVGMaskElement.html"><div class="icon-interface"></div>SVGMaskElement</a></li>
+<li><a href="../html/SVGMatrix.html"><div class="icon-interface"></div>SVGMatrix</a></li>
+<li><a href="../html/SVGMetadataElement.html"><div class="icon-interface"></div>SVGMetadataElement</a></li>
+<li><a href="../html/SVGMissingGlyphElement.html"><div class="icon-interface"></div>SVGMissingGlyphElement</a></li>
+<li><a href="../html/SVGMPathElement.html"><div class="icon-interface"></div>SVGMPathElement</a></li>
+<li><a href="../html/SVGNumber.html"><div class="icon-interface"></div>SVGNumber</a></li>
+<li><a href="../html/SVGNumberList.html"><div class="icon-interface"></div>SVGNumberList</a></li>
+<li><a href="../html/SVGPaint.html"><div class="icon-interface"></div>SVGPaint</a></li>
+<li><a href="../html/SVGPathElement.html"><div class="icon-interface"></div>SVGPathElement</a></li>
+<li><a href="../html/SVGPathSeg.html"><div class="icon-interface"></div>SVGPathSeg</a></li>
+<li><a href="../html/SVGPathSegArcAbs.html"><div class="icon-interface"></div>SVGPathSegArcAbs</a></li>
+<li><a href="../html/SVGPathSegArcRel.html"><div class="icon-interface"></div>SVGPathSegArcRel</a></li>
+<li><a href="../html/SVGPathSegClosePath.html"><div class="icon-interface"></div>SVGPathSegClosePath</a></li>
+<li><a href="../html/SVGPathSegCurvetoCubicAbs.html"><div class="icon-interface"></div>SVGPathSegCurvetoCubicAbs</a></li>
+<li><a href="../html/SVGPathSegCurvetoCubicRel.html"><div class="icon-interface"></div>SVGPathSegCurvetoCubicRel</a></li>
+<li><a href="../html/SVGPathSegCurvetoCubicSmoothAbs.html"><div class="icon-interface"></div>SVGPathSegCurvetoCubicSmoothAbs</a></li>
+<li><a href="../html/SVGPathSegCurvetoCubicSmoothRel.html"><div class="icon-interface"></div>SVGPathSegCurvetoCubicSmoothRel</a></li>
+<li><a href="../html/SVGPathSegCurvetoQuadraticAbs.html"><div class="icon-interface"></div>SVGPathSegCurvetoQuadraticAbs</a></li>
+<li><a href="../html/SVGPathSegCurvetoQuadraticRel.html"><div class="icon-interface"></div>SVGPathSegCurvetoQuadraticRel</a></li>
+<li><a href="../html/SVGPathSegCurvetoQuadraticSmoothAbs.html"><div class="icon-interface"></div>SVGPathSegCurvetoQuadraticSmoothAbs</a></li>
+<li><a href="../html/SVGPathSegCurvetoQuadraticSmoothRel.html"><div class="icon-interface"></div>SVGPathSegCurvetoQuadraticSmoothRel</a></li>
+<li><a href="../html/SVGPathSegLinetoAbs.html"><div class="icon-interface"></div>SVGPathSegLinetoAbs</a></li>
+<li><a href="../html/SVGPathSegLinetoHorizontalAbs.html"><div class="icon-interface"></div>SVGPathSegLinetoHorizontalAbs</a></li>
+<li><a href="../html/SVGPathSegLinetoHorizontalRel.html"><div class="icon-interface"></div>SVGPathSegLinetoHorizontalRel</a></li>
+<li><a href="../html/SVGPathSegLinetoRel.html"><div class="icon-interface"></div>SVGPathSegLinetoRel</a></li>
+<li><a href="../html/SVGPathSegLinetoVerticalAbs.html"><div class="icon-interface"></div>SVGPathSegLinetoVerticalAbs</a></li>
+<li><a href="../html/SVGPathSegLinetoVerticalRel.html"><div class="icon-interface"></div>SVGPathSegLinetoVerticalRel</a></li>
+<li><a href="../html/SVGPathSegList.html"><div class="icon-interface"></div>SVGPathSegList</a></li>
+<li><a href="../html/SVGPathSegMovetoAbs.html"><div class="icon-interface"></div>SVGPathSegMovetoAbs</a></li>
+<li><a href="../html/SVGPathSegMovetoRel.html"><div class="icon-interface"></div>SVGPathSegMovetoRel</a></li>
+<li><a href="../html/SVGPatternElement.html"><div class="icon-interface"></div>SVGPatternElement</a></li>
+<li><a href="../html/SVGPoint.html"><div class="icon-interface"></div>SVGPoint</a></li>
+<li><a href="../html/SVGPointList.html"><div class="icon-interface"></div>SVGPointList</a></li>
+<li><a href="../html/SVGPolygonElement.html"><div class="icon-interface"></div>SVGPolygonElement</a></li>
+<li><a href="../html/SVGPolylineElement.html"><div class="icon-interface"></div>SVGPolylineElement</a></li>
+<li><a href="../html/SVGPreserveAspectRatio.html"><div class="icon-interface"></div>SVGPreserveAspectRatio</a></li>
+<li><a href="../html/SVGRadialGradientElement.html"><div class="icon-interface"></div>SVGRadialGradientElement</a></li>
+<li><a href="../html/SVGRect.html"><div class="icon-interface"></div>SVGRect</a></li>
+<li><a href="../html/SVGRectElement.html"><div class="icon-interface"></div>SVGRectElement</a></li>
+<li><a href="../html/SVGRenderingIntent.html"><div class="icon-interface"></div>SVGRenderingIntent</a></li>
+<li><a href="../html/SVGScriptElement.html"><div class="icon-interface"></div>SVGScriptElement</a></li>
+<li><a href="../html/SVGSetElement.html"><div class="icon-interface"></div>SVGSetElement</a></li>
+<li><a href="../html/SVGStopElement.html"><div class="icon-interface"></div>SVGStopElement</a></li>
+<li><a href="../html/SVGStringList.html"><div class="icon-interface"></div>SVGStringList</a></li>
+<li><a href="../html/SVGStylable.html"><div class="icon-interface"></div>SVGStylable</a></li>
+<li><a href="../html/SVGStyleElement.html"><div class="icon-interface"></div>SVGStyleElement</a></li>
+<li><a href="../html/SVGSVGElement.html"><div class="icon-interface"></div>SVGSVGElement</a></li>
+<li><a href="../html/SVGSwitchElement.html"><div class="icon-interface"></div>SVGSwitchElement</a></li>
+<li><a href="../html/SVGSymbolElement.html"><div class="icon-interface"></div>SVGSymbolElement</a></li>
+<li><a href="../html/SVGTests.html"><div class="icon-interface"></div>SVGTests</a></li>
+<li><a href="../html/SVGTextContentElement.html"><div class="icon-interface"></div>SVGTextContentElement</a></li>
+<li><a href="../html/SVGTextElement.html"><div class="icon-interface"></div>SVGTextElement</a></li>
+<li><a href="../html/SVGTextPathElement.html"><div class="icon-interface"></div>SVGTextPathElement</a></li>
+<li><a href="../html/SVGTextPositioningElement.html"><div class="icon-interface"></div>SVGTextPositioningElement</a></li>
+<li><a href="../html/SVGTitleElement.html"><div class="icon-interface"></div>SVGTitleElement</a></li>
+<li><a href="../html/SVGTransform.html"><div class="icon-interface"></div>SVGTransform</a></li>
+<li><a href="../html/SVGTransformable.html"><div class="icon-interface"></div>SVGTransformable</a></li>
+<li><a href="../html/SVGTransformList.html"><div class="icon-interface"></div>SVGTransformList</a></li>
+<li><a href="../html/SVGTRefElement.html"><div class="icon-interface"></div>SVGTRefElement</a></li>
+<li><a href="../html/SVGTSpanElement.html"><div class="icon-interface"></div>SVGTSpanElement</a></li>
+<li><a href="../html/SVGUnitTypes.html"><div class="icon-interface"></div>SVGUnitTypes</a></li>
+<li><a href="../html/SVGURIReference.html"><div class="icon-interface"></div>SVGURIReference</a></li>
+<li><a href="../html/SVGUseElement.html"><div class="icon-interface"></div>SVGUseElement</a></li>
+<li><a href="../html/SVGViewElement.html"><div class="icon-interface"></div>SVGViewElement</a></li>
+<li><a href="../html/SVGViewSpec.html"><div class="icon-interface"></div>SVGViewSpec</a></li>
+<li><a href="../html/SVGVKernElement.html"><div class="icon-interface"></div>SVGVKernElement</a></li>
+<li><a href="../html/SVGZoomAndPan.html"><div class="icon-interface"></div>SVGZoomAndPan</a></li>
+<li><a href="../html/SVGZoomEvent.html"><div class="icon-interface"></div>SVGZoomEvent</a></li>
+<li><a href="../html/TableCaptionElement.html"><div class="icon-interface"></div>TableCaptionElement</a></li>
+<li><a href="../html/TableCellElement.html"><div class="icon-interface"></div>TableCellElement</a></li>
+<li><a href="../html/TableColElement.html"><div class="icon-interface"></div>TableColElement</a></li>
+<li><a href="../html/TableElement.html"><div class="icon-interface"></div>TableElement</a></li>
+<li><a href="../html/TableRowElement.html"><div class="icon-interface"></div>TableRowElement</a></li>
+<li><a href="../html/TableSectionElement.html"><div class="icon-interface"></div>TableSectionElement</a></li>
+<li><a href="../html/Testing.html"><div class="icon-class"></div>Testing</a></li>
+<li><a href="../html/Text.html"><div class="icon-interface"></div>Text</a></li>
+<li><a href="../html/TextAreaElement.html"><div class="icon-interface"></div>TextAreaElement</a></li>
+<li><a href="../html/TextEvent.html"><div class="icon-interface"></div>TextEvent</a></li>
+<li><a href="../html/TextMetrics.html"><div class="icon-interface"></div>TextMetrics</a></li>
+<li><a href="../html/TextTrack.html"><div class="icon-interface"></div>TextTrack</a></li>
+<li><a href="../html/TextTrackCue.html"><div class="icon-interface"></div>TextTrackCue</a></li>
+<li><a href="../html/TextTrackCueList.html"><div class="icon-interface"></div>TextTrackCueList</a></li>
+<li><a href="../html/TextTrackList.html"><div class="icon-interface"></div>TextTrackList</a></li>
+<li><a href="../html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../html/TimeRanges.html"><div class="icon-interface"></div>TimeRanges</a></li>
+<li><a href="../html/TitleElement.html"><div class="icon-interface"></div>TitleElement</a></li>
+<li><a href="../html/Touch.html"><div class="icon-interface"></div>Touch</a></li>
+<li><a href="../html/TouchEvent.html"><div class="icon-interface"></div>TouchEvent</a></li>
+<li><a href="../html/TouchList.html"><div class="icon-interface"></div>TouchList</a></li>
+<li><a href="../html/TrackElement.html"><div class="icon-interface"></div>TrackElement</a></li>
+<li><a href="../html/TrackEvent.html"><div class="icon-interface"></div>TrackEvent</a></li>
+<li><a href="../html/TransitionEvent.html"><div class="icon-interface"></div>TransitionEvent</a></li>
+<li><a href="../html/TreeWalker.html"><div class="icon-interface"></div>TreeWalker</a></li>
+<li><a href="../html/UIEvent.html"><div class="icon-interface"></div>UIEvent</a></li>
+<li><a href="../html/Uint16Array.html"><div class="icon-interface"></div>Uint16Array</a></li>
+<li><a href="../html/Uint32Array.html"><div class="icon-interface"></div>Uint32Array</a></li>
+<li><a href="../html/Uint8Array.html"><div class="icon-interface"></div>Uint8Array</a></li>
+<li><a href="../html/Uint8ClampedArray.html"><div class="icon-interface"></div>Uint8ClampedArray</a></li>
+<li><a href="../html/UListElement.html"><div class="icon-interface"></div>UListElement</a></li>
+<li><a href="../html/UnknownElement.html"><div class="icon-interface"></div>UnknownElement</a></li>
+<li><a href="../html/ValidityState.html"><div class="icon-interface"></div>ValidityState</a></li>
+<li><a href="../html/VideoElement.html"><div class="icon-interface"></div>VideoElement</a></li>
+<li><a href="../html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../html/WaveShaperNode.html"><div class="icon-interface"></div>WaveShaperNode</a></li>
+<li><a href="../html/WebGLActiveInfo.html"><div class="icon-interface"></div>WebGLActiveInfo</a></li>
+<li><a href="../html/WebGLBuffer.html"><div class="icon-interface"></div>WebGLBuffer</a></li>
+<li><a href="../html/WebGLCompressedTextureS3TC.html"><div class="icon-interface"></div>WebGLCompressedTextureS3TC</a></li>
+<li><a href="../html/WebGLContextAttributes.html"><div class="icon-interface"></div>WebGLContextAttributes</a></li>
+<li><a href="../html/WebGLContextEvent.html"><div class="icon-interface"></div>WebGLContextEvent</a></li>
+<li><a href="../html/WebGLDebugRendererInfo.html"><div class="icon-interface"></div>WebGLDebugRendererInfo</a></li>
+<li><a href="../html/WebGLDebugShaders.html"><div class="icon-interface"></div>WebGLDebugShaders</a></li>
+<li><a href="../html/WebGLFramebuffer.html"><div class="icon-interface"></div>WebGLFramebuffer</a></li>
+<li><a href="../html/WebGLLoseContext.html"><div class="icon-interface"></div>WebGLLoseContext</a></li>
+<li><a href="../html/WebGLProgram.html"><div class="icon-interface"></div>WebGLProgram</a></li>
+<li><a href="../html/WebGLRenderbuffer.html"><div class="icon-interface"></div>WebGLRenderbuffer</a></li>
+<li><a href="../html/WebGLRenderingContext.html"><div class="icon-interface"></div>WebGLRenderingContext</a></li>
+<li><a href="../html/WebGLShader.html"><div class="icon-interface"></div>WebGLShader</a></li>
+<li><a href="../html/WebGLTexture.html"><div class="icon-interface"></div>WebGLTexture</a></li>
+<li><a href="../html/WebGLUniformLocation.html"><div class="icon-interface"></div>WebGLUniformLocation</a></li>
+<li><a href="../html/WebGLVertexArrayObjectOES.html"><div class="icon-interface"></div>WebGLVertexArrayObjectOES</a></li>
+<li><a href="../html/WebKitCSSRegionRule.html"><div class="icon-interface"></div>WebKitCSSRegionRule</a></li>
+<li><a href="../html/WebKitNamedFlow.html"><div class="icon-interface"></div>WebKitNamedFlow</a></li>
+<li><a href="../html/WebSocket.html"><div class="icon-interface"></div>WebSocket</a></li>
+<li><a href="../html/WebSocketEvents.html"><div class="icon-interface"></div>WebSocketEvents</a></li>
+<li><a href="../html/WheelEvent.html"><div class="icon-interface"></div>WheelEvent</a></li>
+<li><a href="../html/Window.html"><div class="icon-interface"></div>Window</a></li>
+<li><a href="../html/WindowEvents.html"><div class="icon-interface"></div>WindowEvents</a></li>
+<li><a href="../html/Worker.html"><div class="icon-interface"></div>Worker</a></li>
+<li><a href="../html/WorkerContext.html"><div class="icon-interface"></div>WorkerContext</a></li>
+<li><a href="../html/WorkerEvents.html"><div class="icon-interface"></div>WorkerEvents</a></li>
+<li><a href="../html/WorkerLocation.html"><div class="icon-interface"></div>WorkerLocation</a></li>
+<li><a href="../html/WorkerNavigator.html"><div class="icon-interface"></div>WorkerNavigator</a></li>
+<li><a href="../html/XMLHttpRequest.html"><div class="icon-interface"></div>XMLHttpRequest</a></li>
+<li><a href="../html/XMLHttpRequestEvents.html"><div class="icon-interface"></div>XMLHttpRequestEvents</a></li>
+<li><a href="../html/XMLHttpRequestProgressEvent.html"><div class="icon-interface"></div>XMLHttpRequestProgressEvent</a></li>
+<li><a href="../html/XMLHttpRequestUpload.html"><div class="icon-interface"></div>XMLHttpRequestUpload</a></li>
+<li><a href="../html/XMLHttpRequestUploadEvents.html"><div class="icon-interface"></div>XMLHttpRequestUploadEvents</a></li>
+<li><a href="../html/XMLSerializer.html"><div class="icon-interface"></div>XMLSerializer</a></li>
+<li><a href="../html/XPathEvaluator.html"><div class="icon-interface"></div>XPathEvaluator</a></li>
+<li><a href="../html/XPathExpression.html"><div class="icon-interface"></div>XPathExpression</a></li>
+<li><a href="../html/XPathNSResolver.html"><div class="icon-interface"></div>XPathNSResolver</a></li>
+<li><a href="../html/XPathResult.html"><div class="icon-interface"></div>XPathResult</a></li>
+<li><a href="../html/XSLTProcessor.html"><div class="icon-interface"></div>XSLTProcessor</a></li>
+<li><a href="../html/DOMException.html"><div class="icon-exception"></div>DOMException</a></li>
+<li><a href="../html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../html/IDBDatabaseException.html"><div class="icon-exception"></div>IDBDatabaseException</a></li>
+<li><a href="../html/OperationNotAllowedException.html"><div class="icon-exception"></div>OperationNotAllowedException</a></li>
+<li><a href="../html/RangeException.html"><div class="icon-exception"></div>RangeException</a></li>
+<li><a href="../html/SQLException.html"><div class="icon-exception"></div>SQLException</a></li>
+<li><a href="../html/SVGException.html"><div class="icon-exception"></div>SVGException</a></li>
+<li><a href="../html/XMLHttpRequestException.html"><div class="icon-exception"></div>XMLHttpRequestException</a></li>
+<li><a href="../html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+</div>
+<div class="content">
+        <h2>Interface
+            <strong>MediaController</strong></h2>
+        
+<div class="doc">
+
+</div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="MediaController">
+<span class="show-code">Code</span>
+new <strong>MediaController</strong>() <a class="anchor-link" href="#MediaController"
+              title="Permalink to MediaController.MediaController">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+MediaController();
+</pre>
+</div>
+</div>
+<h3>Methods</h3>
+<div class="method"><h4 id="addEventListener">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_core/void.html">void</a> listener(<a href="../html/Event.html">Event</a> event), [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#addEventListener"
+              title="Permalink to MediaController.addEventListener">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void addEventListener(String type, EventListener listener, [bool useCapture]);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="dispatchEvent">
+<span class="show-code">Code</span>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../html/Event.html">Event</a> evt) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to MediaController.dispatchEvent">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+bool dispatchEvent(Event evt);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="pause">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>pause</strong>() <a class="anchor-link" href="#pause"
+              title="Permalink to MediaController.pause">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void pause();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="play">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>play</strong>() <a class="anchor-link" href="#play"
+              title="Permalink to MediaController.play">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void play();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="removeEventListener">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_core/void.html">void</a> listener(<a href="../html/Event.html">Event</a> event), [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#removeEventListener"
+              title="Permalink to MediaController.removeEventListener">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void removeEventListener(String type, EventListener listener, [bool useCapture]);
+</pre>
+</div>
+</div>
+<h3>Fields</h3>
+<div class="field"><h4 id="buffered">
+<span class="show-code">Code</span>
+final <a href="../html/TimeRanges.html">TimeRanges</a>         <strong>buffered</strong> <a class="anchor-link"
+            href="#buffered"
+            title="Permalink to MediaController.buffered">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+final TimeRanges buffered;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="currentTime">
+<span class="show-code">Code</span>
+<a href="../dart_core/num.html">num</a>         <strong>currentTime</strong> <a class="anchor-link"
+            href="#currentTime"
+            title="Permalink to MediaController.currentTime">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+num currentTime;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="defaultPlaybackRate">
+<span class="show-code">Code</span>
+<a href="../dart_core/num.html">num</a>         <strong>defaultPlaybackRate</strong> <a class="anchor-link"
+            href="#defaultPlaybackRate"
+            title="Permalink to MediaController.defaultPlaybackRate">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+num defaultPlaybackRate;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="duration">
+<span class="show-code">Code</span>
+final <a href="../dart_core/num.html">num</a>         <strong>duration</strong> <a class="anchor-link"
+            href="#duration"
+            title="Permalink to MediaController.duration">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+final num duration;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="muted">
+<span class="show-code">Code</span>
+<a href="../dart_core/bool.html">bool</a>         <strong>muted</strong> <a class="anchor-link"
+            href="#muted"
+            title="Permalink to MediaController.muted">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+bool muted;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="paused">
+<span class="show-code">Code</span>
+final <a href="../dart_core/bool.html">bool</a>         <strong>paused</strong> <a class="anchor-link"
+            href="#paused"
+            title="Permalink to MediaController.paused">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+final bool paused;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="playbackRate">
+<span class="show-code">Code</span>
+<a href="../dart_core/num.html">num</a>         <strong>playbackRate</strong> <a class="anchor-link"
+            href="#playbackRate"
+            title="Permalink to MediaController.playbackRate">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+num playbackRate;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="played">
+<span class="show-code">Code</span>
+final <a href="../html/TimeRanges.html">TimeRanges</a>         <strong>played</strong> <a class="anchor-link"
+            href="#played"
+            title="Permalink to MediaController.played">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+final TimeRanges played;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="seekable">
+<span class="show-code">Code</span>
+final <a href="../html/TimeRanges.html">TimeRanges</a>         <strong>seekable</strong> <a class="anchor-link"
+            href="#seekable"
+            title="Permalink to MediaController.seekable">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+final TimeRanges seekable;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="volume">
+<span class="show-code">Code</span>
+<a href="../dart_core/num.html">num</a>         <strong>volume</strong> <a class="anchor-link"
+            href="#volume"
+            title="Permalink to MediaController.volume">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+num volume;
+</pre>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer"></div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

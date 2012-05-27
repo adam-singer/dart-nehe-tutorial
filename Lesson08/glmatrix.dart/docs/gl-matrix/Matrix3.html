@@ -1,0 +1,218 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Library gl-matrix / Class Matrix3</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="gl-matrix" data-type="Matrix3">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../gl-matrix.html">gl-matrix</a> &rsaquo; <a href="../gl-matrix/Matrix3.html">Matrix3</a></div>
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_coreimpl.html">dart:coreimpl</a></h2><h2><div class="icon-library"></div><a href="../gl-matrix.html">gl-matrix</a></h2><ul class="icon">
+<li><a href="../gl-matrix/Matrix.html"><div class="icon-class"></div>Matrix</a></li>
+<li><div class="icon-class"></div><strong>Matrix3</strong></li>
+<li><a href="../gl-matrix/Quaternion.html"><div class="icon-class"></div>Quaternion</a></li>
+<li><a href="../gl-matrix/Vector3.html"><div class="icon-class"></div>Vector3</a></li>
+<li><a href="../gl-matrix/Vector4.html"><div class="icon-class"></div>Vector4</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../html.html">html</a></h2></div>
+<div class="content">
+        <h2>Class
+            <strong>Matrix3</strong></h2>
+        
+<div class="doc">
+
+</div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Matrix3">
+<span class="show-code">Code</span>
+new <strong>Matrix3</strong>([<a href="../html/Float32Array.html">Float32Array</a> list]) <a class="anchor-link" href="#Matrix3"
+              title="Permalink to Matrix3.Matrix3">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+Matrix3([Float32Array list]) {
+  if(list == null) dest = new Float32Array(9);
+  if(list.length != 9) dest = new Float32Array(9);
+  dest = list;
+}
+</pre>
+</div>
+</div>
+<h3>Methods</h3>
+<div class="method"><h4 id="Copy">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Matrix3.html">Matrix3</a> <strong>Copy</strong>(<a href="../gl-matrix/Matrix3.html">Matrix3</a> mat, [<a href="../gl-matrix/Matrix3.html">Matrix3</a> result]) <a class="anchor-link" href="#Copy"
+              title="Permalink to Matrix3.Copy">#</a></h4>
+<div class="doc">
+<p>Copies the values of one mat3 to another</p>
+<p>@param {mat3} mat mat3 containing values to copy
+@param {mat3} dest mat3 receiving copied values</p>
+<p>@returns {mat3} dest</p>
+<pre class="source">
+Matrix3 Copy(Matrix3 mat, [Matrix3 result]) {
+    result.dest[0] = mat.dest[0];
+    result.dest[1] = mat.dest[1];
+    result.dest[2] = mat.dest[2];
+    result.dest[3] = mat.dest[3];
+    result.dest[4] = mat.dest[4];
+    result.dest[5] = mat.dest[5];
+    result.dest[6] = mat.dest[6];
+    result.dest[7] = mat.dest[7];
+    result.dest[8] = mat.dest[8];
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Identity">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Matrix3.html">Matrix3</a> <strong>Identity</strong>([<a href="../gl-matrix/Matrix3.html">Matrix3</a> result]) <a class="anchor-link" href="#Identity"
+              title="Permalink to Matrix3.Identity">#</a></h4>
+<div class="doc">
+<p>Sets a mat3 to an identity matrix</p>
+<p>@param {mat3} dest mat3 to set</p>
+<p>@returns dest if specified, otherwise a new mat3</p>
+<pre class="source">
+Matrix3 Identity([Matrix3 result]) {
+    if(result == null) { result = new Matrix3(); }
+    result.dest[0] = 1;
+    result.dest[1] = 0;
+    result.dest[2] = 0;
+    result.dest[3] = 0;
+    result.dest[4] = 1;
+    result.dest[5] = 0;
+    result.dest[6] = 0;
+    result.dest[7] = 0;
+    result.dest[8] = 1;
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="ToMat4">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Matrix.html">Matrix</a> <strong>ToMat4</strong>(<a href="../gl-matrix/Matrix3.html">Matrix3</a> mat, [<a href="../gl-matrix/Matrix.html">Matrix</a> result]) <a class="anchor-link" href="#ToMat4"
+              title="Permalink to Matrix3.ToMat4">#</a></h4>
+<div class="doc">
+<p>Copies the elements of a mat3 into the upper 3x3 elements of a mat4</p>
+<p>@param {mat3} mat mat3 containing values to copy
+@param {mat4} <a class="crossref" href="../gl-matrix/Matrix3.html#dest">dest</a> mat4 receiving copied values</p>
+<p>@returns {mat4} dest if specified, a new mat4 otherwise</p>
+<pre class="source">
+Matrix ToMat4(Matrix3 mat, [Matrix result]) {
+    if(result == null) { result = new Matrix(); }
+
+    result.dest[15] = 1;
+    result.dest[14] = 0;
+    result.dest[13] = 0;
+    result.dest[12] = 0;
+
+    result.dest[11] = 0;
+    result.dest[10] = mat.dest[8];
+    result.dest[9] = mat.dest[7];
+    result.dest[8] = mat.dest[6];
+
+    result.dest[7] = 0;
+    result.dest[6] = mat.dest[5];
+    result.dest[5] = mat.dest[4];
+    result.dest[4] = mat.dest[3];
+
+    result.dest[3] = 0;
+    result.dest[2] = mat.dest[2];
+    result.dest[1] = mat.dest[1];
+    result.dest[0] = mat.dest[0];
+
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<span class="show-code">Code</span>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Matrix3.toString">#</a></h4>
+<div class="doc">
+<p>Returns a string representation of a mat3</p>
+<p>@param {mat3} mat mat3 to represent as a string</p>
+<p>@param {string} String representation of mat</p>
+<pre class="source">
+String toString() {
+    return '[' + dest[0] + ', ' + dest[1] + ', ' + dest[2] +
+        ', ' + dest[3] + ', ' + dest[4] + ', ' + dest[5] +
+        ', ' + dest[6] + ', ' + dest[7] + ', ' + dest[8] + ']';
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Transpose">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Matrix3.html">Matrix3</a> <strong>Transpose</strong>(<a href="../gl-matrix/Matrix3.html">Matrix3</a> mat, [<a href="../gl-matrix/Matrix3.html">Matrix3</a> result]) <a class="anchor-link" href="#Transpose"
+              title="Permalink to Matrix3.Transpose">#</a></h4>
+<div class="doc">
+<p>Transposes a mat3 (flips the values over the diagonal)</p>
+<p>Params:
+@param {mat3} mat mat3 to transpose
+@param {mat3} <a class="crossref" href="../gl-matrix/Matrix3.html#dest">dest</a> mat3 receiving transposed values. If not specified result is written to mat</p>
+<p>@returns {mat3} dest is specified, mat otherwise</p>
+<pre class="source">
+Matrix3 Transpose(Matrix3 mat, [Matrix3 result]) {
+    // If we are transposing ourselves we can skip a few steps but have to cache some values
+    if (result == null || mat === result) {
+        var a01 = mat.dest[1], a02 = mat.dest[2],
+            a12 = mat.dest[5];
+
+        mat.dest[1] = mat.dest[3];
+        mat.dest[2] = mat.dest[6];
+        mat.dest[3] = a01;
+        mat.dest[5] = mat.dest[7];
+        mat.dest[6] = a02;
+        mat.dest[7] = a12;
+        return mat;
+    }
+
+    result.dest[0] = mat.dest[0];
+    result.dest[1] = mat.dest[3];
+    result.dest[2] = mat.dest[6];
+    result.dest[3] = mat.dest[1];
+    result.dest[4] = mat.dest[4];
+    result.dest[5] = mat.dest[7];
+    result.dest[6] = mat.dest[2];
+    result.dest[7] = mat.dest[5];
+    result.dest[8] = mat.dest[8];
+    return result;
+}
+</pre>
+</div>
+</div>
+<h3>Fields</h3>
+<div class="field"><h4 id="dest">
+<span class="show-code">Code</span>
+<a href="../html/Float32Array.html">Float32Array</a>         <strong>dest</strong> <a class="anchor-link"
+            href="#dest"
+            title="Permalink to Matrix3.dest">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+Float32Array dest;
+</pre>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer"></div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        
