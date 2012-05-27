@@ -1,0 +1,161 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Library gl-matrix / Class Vector4</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="gl-matrix" data-type="Vector4">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../gl-matrix.html">gl-matrix</a> &rsaquo; <a href="../gl-matrix/Vector4.html">Vector4</a></div>
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_coreimpl.html">dart:coreimpl</a></h2><h2><div class="icon-library"></div><a href="../gl-matrix.html">gl-matrix</a></h2><ul class="icon">
+<li><a href="../gl-matrix/Matrix.html"><div class="icon-class"></div>Matrix</a></li>
+<li><a href="../gl-matrix/Matrix3.html"><div class="icon-class"></div>Matrix3</a></li>
+<li><a href="../gl-matrix/Quaternion.html"><div class="icon-class"></div>Quaternion</a></li>
+<li><a href="../gl-matrix/Vector3.html"><div class="icon-class"></div>Vector3</a></li>
+<li><div class="icon-class"></div><strong>Vector4</strong></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../html.html">html</a></h2></div>
+<div class="content">
+        <h2>Class
+            <strong>Vector4</strong></h2>
+        
+<div class="doc">
+
+</div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Vector4">
+<span class="show-code">Code</span>
+new <strong>Vector4</strong>([<a href="../html/Float32Array.html">Float32Array</a> list]) <a class="anchor-link" href="#Vector4"
+              title="Permalink to Vector4.Vector4">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+Vector4([Float32Array list]) {
+  if(list == null) dest = new Float32Array(4);
+  if(list.length != 4) dest = new Float32Array(4);
+  dest = list;
+}
+</pre>
+</div>
+</div>
+<h3>Methods</h3>
+<div class="method"><h4 id="get:W">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get W</strong>() <a class="anchor-link" href="#get:W"
+              title="Permalink to Vector4.get W">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get W() =&gt; dest[3];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:W">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set W</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:W"
+              title="Permalink to Vector4.set W">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set W(num val) { dest[3] = val;}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get:X">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get X</strong>() <a class="anchor-link" href="#get:X"
+              title="Permalink to Vector4.get X">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get X() =&gt; dest[0];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:X">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set X</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:X"
+              title="Permalink to Vector4.set X">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set X(num val) { dest[0] = val;}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get:Y">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get Y</strong>() <a class="anchor-link" href="#get:Y"
+              title="Permalink to Vector4.get Y">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get Y() =&gt; dest[1];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:Y">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set Y</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:Y"
+              title="Permalink to Vector4.set Y">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set Y(num val) { dest[1] = val;}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get:Z">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get Z</strong>() <a class="anchor-link" href="#get:Z"
+              title="Permalink to Vector4.get Z">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get Z() =&gt; dest[2];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:Z">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set Z</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:Z"
+              title="Permalink to Vector4.set Z">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set Z(num val) { dest[2] = val;}
+</pre>
+</div>
+</div>
+<h3>Fields</h3>
+<div class="field"><h4 id="dest">
+<span class="show-code">Code</span>
+<a href="../html/Float32Array.html">Float32Array</a>         <strong>dest</strong> <a class="anchor-link"
+            href="#dest"
+            title="Permalink to Vector4.dest">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+Float32Array dest;
+</pre>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer"></div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,517 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Library gl-matrix / Class Vector3</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="gl-matrix" data-type="Vector3">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../gl-matrix.html">gl-matrix</a> &rsaquo; <a href="../gl-matrix/Vector3.html">Vector3</a></div>
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_coreimpl.html">dart:coreimpl</a></h2><h2><div class="icon-library"></div><a href="../gl-matrix.html">gl-matrix</a></h2><ul class="icon">
+<li><a href="../gl-matrix/Matrix.html"><div class="icon-class"></div>Matrix</a></li>
+<li><a href="../gl-matrix/Matrix3.html"><div class="icon-class"></div>Matrix3</a></li>
+<li><a href="../gl-matrix/Quaternion.html"><div class="icon-class"></div>Quaternion</a></li>
+<li><div class="icon-class"></div><strong>Vector3</strong></li>
+<li><a href="../gl-matrix/Vector4.html"><div class="icon-class"></div>Vector4</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../html.html">html</a></h2></div>
+<div class="content">
+        <h2>Class
+            <strong>Vector3</strong></h2>
+        
+<div class="doc">
+
+</div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Vector3">
+<span class="show-code">Code</span>
+new <strong>Vector3</strong>([<a href="../html/Float32Array.html">Float32Array</a> list]) <a class="anchor-link" href="#Vector3"
+              title="Permalink to Vector3.Vector3">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+Vector3([Float32Array list]) {
+  if(list == null) dest = new Float32Array(3);
+  if(list.length != 3) dest = new Float32Array(3);
+  dest = list;
+}
+</pre>
+</div>
+</div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="Add">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Add</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Add"
+              title="Permalink to Vector3.Add">#</a></h4>
+<div class="doc">
+<p>Performs a vector addition</p>
+<p>@param {vec3} vec First operand
+@param {vec3} vec2 Second operand
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Add(Vector3 vec, Vector3 vec2, [Vector3 result]) {
+    if (result == null || vec === result) {
+        vec.dest[0] += vec2.dest[0];
+        vec.dest[1] += vec2.dest[1];
+        vec.dest[2] += vec2.dest[2];
+        return vec;
+    }
+
+    result.dest[0] = vec.dest[0] + vec2.dest[0];
+    result.dest[1] = vec.dest[1] + vec2.dest[1];
+    result.dest[2] = vec.dest[2] + vec2.dest[2];
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Copy">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Copy</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Copy"
+              title="Permalink to Vector3.Copy">#</a></h4>
+<div class="doc">
+<p>Copies the values of one vec3 to another</p>
+<p>@param {vec3} vec vec3 containing values to copy
+@param {vec3} dest vec3 receiving copied values</p>
+<p>@returns {vec3} dest</p>
+<pre class="source">
+static Vector3 Copy(Vector3 vec, [Vector3 result]) {
+    result.dest[0] = vec.dest[0];
+    result.dest[1] = vec.dest[1];
+    result.dest[2] = vec.dest[2];
+
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Cross">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Cross</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Cross"
+              title="Permalink to Vector3.Cross">#</a></h4>
+<div class="doc">
+<p>Generates the cross product of two vec3s</p>
+<p>@param {vec3} vec First operand
+@param {vec3} vec2 Second operand
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Cross(Vector3 vec, Vector3 vec2, [Vector3 result]) {
+    if(result == null) result = new Vector3();
+
+    var x = vec.dest[0], y = vec.dest[1], z = vec.dest[2],
+        x2 = vec2.dest[0], y2 = vec2.dest[1], z2 = vec2.dest[2];
+
+    result.dest[0] = y * z2 - z * y2;
+    result.dest[1] = z * x2 - x * z2;
+    result.dest[2] = x * y2 - y * x2;
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Direction">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Direction</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Direction"
+              title="Permalink to Vector3.Direction">#</a></h4>
+<div class="doc">
+<p>Generates a unit vector pointing from one vector to another</p>
+<p>@param {vec3} vec Origin vec3
+@param {vec3} vec2 vec3 to point to
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Direction(Vector3 vec, Vector3 vec2, [Vector3 result]) {
+    if(result == null) result = new Vector3();
+
+    var x = vec.dest[0] - vec2.dest[0],
+        y = vec.dest[1] - vec2.dest[1],
+        z = vec.dest[2] - vec2.dest[2],
+        len = Math.sqrt(x * x + y * y + z * z);
+
+    if (!len) {
+        result.dest[0] = 0;
+        result.dest[1] = 0;
+        result.dest[2] = 0;
+        return result;
+    }
+
+    len = 1 / len;
+    result.dest[0] = x * len;
+    result.dest[1] = y * len;
+    result.dest[2] = z * len;
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Dist">
+<span class="show-code">Code</span>
+<a href="../dart_core/double.html">double</a> <strong>Dist</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2) <a class="anchor-link" href="#Dist"
+              title="Permalink to Vector3.Dist">#</a></h4>
+<div class="doc">
+<p>Calculates the euclidian distance between two vec3</p>
+<p>Params:
+@param {vec3} vec First vector
+@param {vec3} vec2 Second vector</p>
+<p>@returns {number} Distance between vec and vec2</p>
+<pre class="source">
+static double Dist(Vector3 vec, Vector3 vec2) {
+    var x = vec2.dest[0] - vec.dest[0],
+        y = vec2.dest[1] - vec.dest[1],
+        z = vec2.dest[2] - vec.dest[2];
+        
+    return Math.sqrt(x*x + y*y + z*z);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Dot">
+<span class="show-code">Code</span>
+<a href="../dart_core/num.html">num</a> <strong>Dot</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2) <a class="anchor-link" href="#Dot"
+              title="Permalink to Vector3.Dot">#</a></h4>
+<div class="doc">
+<p>Caclulates the dot product of two vec3s</p>
+<p>@param {vec3} vec First operand
+@param {vec3} vec2 Second operand</p>
+<p>@returns {number} Dot product of vec and vec2</p>
+<pre class="source">
+static num Dot(Vector3 vec, Vector3 vec2) {
+    return vec.dest[0] * vec2.dest[0] + vec.dest[1] * vec2.dest[1] + vec.dest[2] * vec2.dest[2];
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Lerp">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Lerp</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2, <a href="../dart_core/num.html">num</a> lerpVal, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Lerp"
+              title="Permalink to Vector3.Lerp">#</a></h4>
+<div class="doc">
+<p>Performs a linear interpolation between two vec3</p>
+<p>@param {vec3} vec First vector
+@param {vec3} vec2 Second vector
+@param {number} lerp Interpolation amount between the two inputs
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Lerp(Vector3 vec, Vector3 vec2, num lerpVal, [Vector3 result]) {
+    if(result == null) result = new Vector3();
+
+    result.dest[0] = vec.dest[0] + lerpVal * (vec2.dest[0] - vec.dest[0]);
+    result.dest[1] = vec.dest[1] + lerpVal * (vec2.dest[1] - vec.dest[1]);
+    result.dest[2] = vec.dest[2] + lerpVal * (vec2.dest[2] - vec.dest[2]);
+
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Multiply">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Multiply</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Multiply"
+              title="Permalink to Vector3.Multiply">#</a></h4>
+<div class="doc">
+<p>Performs a vector multiplication</p>
+<p>@param {vec3} vec First operand
+@param {vec3} vec2 Second operand
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Multiply(Vector3 vec, Vector3 vec2, [Vector3 result]) {
+    if (result == null || vec === result) {
+        vec.dest[0] *= vec2.dest[0];
+        vec.dest[1] *= vec2.dest[1];
+        vec.dest[2] *= vec2.dest[2];
+        return vec;
+    }
+
+    result.dest[0] = vec.dest[0] * vec2.dest[0];
+    result.dest[1] = vec.dest[1] * vec2.dest[1];
+    result.dest[2] = vec.dest[2] * vec2.dest[2];
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Negate">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Negate</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Negate"
+              title="Permalink to Vector3.Negate">#</a></h4>
+<div class="doc">
+<p>Negates the components of a vec3</p>
+<p>@param {vec3} vec vec3 to negate
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Negate(Vector3 vec, [Vector3 result]) {
+    if(result == null) result = new Vector3();
+
+    result.dest[0] = -vec.dest[0];
+    result.dest[1] = -vec.dest[1];
+    result.dest[2] = -vec.dest[2];
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Normalize">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Normalize</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Normalize"
+              title="Permalink to Vector3.Normalize">#</a></h4>
+<div class="doc">
+<p>Generates a unit vector of the same direction as the provided vec3
+If vector length is 0, returns <code>0, 0, 0</code></p>
+<p>@param {vec3} vec vec3 to normalize
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Normalize(Vector3 vec, [Vector3 result]) {
+    if(result == null) result = new Vector3();
+
+    var x = vec.dest[0], y = vec.dest[1], z = vec.dest[2],
+        len = Math.sqrt(x * x + y * y + z * z);
+
+    if (!len) {
+        result.dest[0] = 0;
+        result.dest[1] = 0;
+        result.dest[2] = 0;
+        return result;
+    } else if (len === 1) {
+        result.dest[0] = x;
+        result.dest[1] = y;
+        result.dest[2] = z;
+        return result;
+    }
+
+    len = 1 / len;
+    result.dest[0] = x * len;
+    result.dest[1] = y * len;
+    result.dest[2] = z * len;
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Scale">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Scale</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, val, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Scale"
+              title="Permalink to Vector3.Scale">#</a></h4>
+<div class="doc">
+<p>Multiplies the components of a vec3 by a scalar value</p>
+<p>@param {vec3} vec vec3 to scale
+@param {number} val Value to scale by
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Scale(Vector3 vec, val, [Vector3 result]) {
+    if (result == null || vec === result) {
+        vec.dest[0] *= val;
+        vec.dest[1] *= val;
+        vec.dest[2] *= val;
+        return vec;
+    }
+
+    result.dest[0] = vec.dest[0] * val;
+    result.dest[1] = vec.dest[1] * val;
+    result.dest[2] = vec.dest[2] * val;
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Subtract">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector3.html">Vector3</a> <strong>Subtract</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Vector3.html">Vector3</a> vec2, [<a href="../gl-matrix/Vector3.html">Vector3</a> result]) <a class="anchor-link" href="#Subtract"
+              title="Permalink to Vector3.Subtract">#</a></h4>
+<div class="doc">
+<p>Performs a vector subtraction</p>
+<p>@param {vec3} vec First operand
+@param {vec3} vec2 Second operand
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving operation result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector3 Subtract(Vector3 vec, Vector3 vec2, [Vector3 result]) {
+    if (result == null || vec === result) {
+        vec.dest[0] -= vec2.dest[0];
+        vec.dest[1] -= vec2.dest[1];
+        vec.dest[2] -= vec2.dest[2];
+        return vec;
+    }
+
+    result.dest[0] = vec.dest[0] - vec2.dest[0];
+    result.dest[1] = vec.dest[1] - vec2.dest[1];
+    result.dest[2] = vec.dest[2] - vec2.dest[2];
+    return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Unproject">
+<span class="show-code">Code</span>
+<a href="../gl-matrix/Vector4.html">Vector4</a> <strong>Unproject</strong>(<a href="../gl-matrix/Vector3.html">Vector3</a> vec, <a href="../gl-matrix/Matrix.html">Matrix</a> view, <a href="../gl-matrix/Matrix.html">Matrix</a> proj, <a href="../gl-matrix/Vector4.html">Vector4</a> viewport, [<a href="../gl-matrix/Vector4.html">Vector4</a> result]) <a class="anchor-link" href="#Unproject"
+              title="Permalink to Vector3.Unproject">#</a></h4>
+<div class="doc">
+<p>Projects the specified vec3 from screen space into object space
+Based on the &lt;a href="http://webcvs.freedesktop.org/mesa/Mesa/src/glu/mesa/project.c?revision=1.4&amp;view=markup">Mesa gluUnProject implementation&lt;/a></p>
+<p>@param {vec3} vec Screen-space vector to project
+@param {mat4} view View matrix
+@param {mat4} proj Projection matrix
+@param {vec4} viewport Viewport as given to gl.viewport <code>x, y, width, height</code>
+@param {vec3} <a class="crossref" href="../gl-matrix/Vector3.html#dest">dest</a> vec3 receiving unprojected result. If not specified result is written to vec</p>
+<p>@returns {vec3} dest if specified, vec otherwise</p>
+<pre class="source">
+static Vector4 Unproject(Vector3 vec, Matrix view, Matrix proj, Vector4 viewport, [Vector4 result]) {
+    if(result == null) result = new Vector4();
+
+    Matrix m = new Matrix();
+    Vector4 v = new Vector4();
+    
+    v.dest[0] = (vec.dest[0] - viewport.dest[0]) * 2.0 / viewport.dest[2] - 1.0;
+    v.dest[1] = (vec.dest[1] - viewport.dest[1]) * 2.0 / viewport.dest[3] - 1.0;
+    v.dest[2] = 2.0 * vec.dest[2] - 1.0;
+    v.dest[3] = 1.0;
+    
+    Matrix.Multiply(proj, view, m);
+    if(Matrix.Inverse(m) == null) { return null; }
+    
+    Matrix.MultiplyVec4(m, v);
+    if(v.dest[3] === 0.0) { return null; }
+
+    result.dest[0] = v.dest[0] / v.dest[3];
+    result.dest[1] = v.dest[1] / v.dest[3];
+    result.dest[2] = v.dest[2] / v.dest[3];
+    
+    return result;
+}
+</pre>
+</div>
+</div>
+<h3>Methods</h3>
+<div class="method"><h4 id="length">
+<span class="show-code">Code</span>
+<a href="../dart_core/num.html">num</a> <strong>length</strong>() <a class="anchor-link" href="#length"
+              title="Permalink to Vector3.length">#</a></h4>
+<div class="doc">
+<p>Caclulates the length of a vec3</p>
+<p>@param {vec3} vec vec3 to calculate length of</p>
+<p>@returns {number} Length of vec</p>
+<pre class="source">
+num length() {
+    var x = dest[0], y = dest[1], z = dest[2];
+    return Math.sqrt(x * x + y * y + z * z);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<span class="show-code">Code</span>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Vector3.toString">#</a></h4>
+<div class="doc">
+<p>Returns a string representation of a vector</p>
+<p>@param {vec3} vec Vector to represent as a string</p>
+<p>@returns {string} String representation of vec</p>
+<pre class="source">
+String toString() =&gt; '[' + dest[0] + ', ' + dest[1] + ', ' + dest[2] + ']';
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get:X">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get X</strong>() <a class="anchor-link" href="#get:X"
+              title="Permalink to Vector3.get X">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get X() =&gt; dest[0];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:X">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set X</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:X"
+              title="Permalink to Vector3.set X">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set X(num val) { dest[0] = val;}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get:Y">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get Y</strong>() <a class="anchor-link" href="#get:Y"
+              title="Permalink to Vector3.get Y">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get Y() =&gt; dest[1];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:Y">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set Y</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:Y"
+              title="Permalink to Vector3.set Y">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set Y(num val) { dest[1] = val;}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="get:Z">
+<span class="show-code">Code</span>
+<a href="../dart_core/int.html">int</a> <strong>get Z</strong>() <a class="anchor-link" href="#get:Z"
+              title="Permalink to Vector3.get Z">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+int get Z() =&gt; dest[2];
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="set:Z">
+<span class="show-code">Code</span>
+<a href="../dart_core/void.html">void</a> <strong>set Z</strong>(<a href="../dart_core/num.html">num</a> val) <a class="anchor-link" href="#set:Z"
+              title="Permalink to Vector3.set Z">#</a></h4>
+<div class="doc">
+
+<pre class="source">
+void set Z(num val) { dest[2] = val;}
+</pre>
+</div>
+</div>
+<h3>Fields</h3>
+<div class="field"><h4 id="dest">
+<span class="show-code">Code</span>
+<a href="../html/Float32Array.html">Float32Array</a>         <strong>dest</strong> <a class="anchor-link"
+            href="#dest"
+            title="Permalink to Vector3.dest">#</a>
+        </h4>
+        <div class="doc">
+
+<pre class="source">
+Float32Array dest;
+</pre>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer"></div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        
