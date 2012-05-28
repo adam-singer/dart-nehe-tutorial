@@ -1,3 +1,4 @@
+This is under construction, some code may be incomplete or just plain wrong.  
 
 [Lesson05](http://nehe.gamedev.net/tutorial/3d_shapes/10035/)
 --------
